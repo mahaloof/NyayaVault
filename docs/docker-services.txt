@@ -1,0 +1,5 @@
+NAME                    IMAGE                                                                     COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+nyayavault-backend-1    sha256:c500b22c084d00c7c5a7900aa6978e62c65801e3ce36681aa723c067c75dcc43   "sh -c 'alembic upgr…"   backend    6 minutes ago    Up 6 minutes              127.0.0.1:8001->8000/tcp
+nyayavault-frontend-1   nyayavault-frontend                                                       "docker-entrypoint.s…"   frontend   2 minutes ago    Up 2 minutes              127.0.0.1:3001->3000/tcp
+nyayavault-minio-1      sha256:5090458220163fcf4fc55a3dc2ce236f84d391fe5b3bddc06fbe1394e041f5dc   "minio server /data …"   minio      12 minutes ago   Up 12 minutes             127.0.0.1:9001->9001/tcp
+nyayavault-postgres-1   postgres:17-alpine                                                        "docker-entrypoint.s…"   postgres   12 minutes ago   Up 12 minutes (healthy)   5432/tcp

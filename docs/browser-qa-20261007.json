@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-07",
+  "method": "Codex browser controls against running Docker frontend",
+  "evidence": "EVD-QA-20261007-926048",
+  "passed": [
+    "Invalid password visibly rejected",
+    "Investigator sign-in and dashboard",
+    "Synthetic file upload",
+    "Committed transaction IDs visible",
+    "Stored original verification",
+    "Custody transfer to forensic officer",
+    "Forensic login and evidence access",
+    "Modified candidate detected with unchanged trusted hash",
+    "Audit search shows actions and transaction IDs",
+    "System status connected"
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "status": "passed",
+  "mode": "verify",
+  "read_only": true,
+  "container": "nyayavault-portable-backend-1",
+  "completed_at": "2026-10-08T16:03:23.971676+00:00",
+  "checks": [
+    {
+      "test": "Private source baseline is a successful snapshot",
+      "passed": true
+    },
+    {
+      "test": "Evidence inventory is nonempty",
+      "passed": true
+    },
+    {
+      "test": "Every encrypted original authenticates and matches its trusted SHA-256",
+      "passed": true
+    },
+    {
+      "test": "Every application custody chain is valid",
+      "passed": true
+    },
+    {
+      "test": "Every custody event and committed transaction ID matches real Fabric history",
+      "passed": true
+    },
+    {
+      "test": "Original evidence encryption key and providers are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original users rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original cases rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original case_members rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original evidence rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original custody_events rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original blockchain_transactions rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original verification_logs rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original audit_logs rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original tags rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original evidence_tags rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original ocr_documents rows are unchanged",
+      "passed": true
+    },
+    {
+      "test": "Every original ciphertext object and decrypted fingerprint is identical",
+      "passed": true
+    },
+    {
+      "test": "Complete original Fabric histories, proof fields and transaction references are unchanged",
+      "passed": true
+    }
+  ],
+  "excluded_user_fields": [
+    "token_version"
+  ],
+  "counts": {
+    "users": 5,
+    "cases": 11,
+    "case_members": 44,
+    "evidence": 19,
+    "custody_events": 82,
+    "blockchain_transactions": 82,
+    "verification_logs": 30,
+    "audit_logs": 144,
+    "tags": 4,
+    "evidence_tags": 34,
+    "ocr_documents": 0,
+    "active_cases": 4,
+    "archived_cases": 7,
+    "encrypted_objects": 19,
+    "fabric_events": 82
+  },
+  "preservation": {
+    "users": {
+      "original_rows": 5,
+      "current_rows": 5,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "cases": {
+      "original_rows": 9,
+      "current_rows": 11,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "case_members": {
+      "original_rows": 38,
+      "current_rows": 44,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "evidence": {
+      "original_rows": 17,
+      "current_rows": 19,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "custody_events": {
+      "original_rows": 70,
+      "current_rows": 82,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "blockchain_transactions": {
+      "original_rows": 70,
+      "current_rows": 82,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "verification_logs": {
+      "original_rows": 24,
+      "current_rows": 30,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "audit_logs": {
+      "original_rows": 117,
+      "current_rows": 144,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "tags": {
+      "original_rows": 4,
+      "current_rows": 4,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "evidence_tags": {
+      "original_rows": 30,
+      "current_rows": 34,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    },
+    "ocr_documents": {
+      "original_rows": 0,
+      "current_rows": 0,
+      "missing_rows": 0,
+      "changed_rows": 0,
+      "unchanged": true
+    }
+  },
+  "preserved_original_counts": {
+    "users": 5,
+    "cases": 9,
+    "case_members": 38,
+    "evidence": 17,
+    "custody_events": 70,
+    "blockchain_transactions": 70,
+    "verification_logs": 24,
+    "audit_logs": 117,
+    "tags": 4,
+    "evidence_tags": 30,
+    "ocr_documents": 0,
+    "active_cases": 4,
+    "archived_cases": 5,
+    "encrypted_objects": 17,
+    "fabric_events": 70
+  },
+  "additional_records_allowed": true
+}

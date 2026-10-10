@@ -1,0 +1,553 @@
+{
+  "api": "http://backend:8000/api",
+  "elapsed_seconds": 12.964282881000145,
+  "checks": [
+    {
+      "test": "Unauthenticated access denied",
+      "passed": true
+    },
+    {
+      "test": "Login admin",
+      "passed": true
+    },
+    {
+      "test": "Login investigatorA",
+      "passed": true
+    },
+    {
+      "test": "Login investigatorB",
+      "passed": true
+    },
+    {
+      "test": "Login legal",
+      "passed": true
+    },
+    {
+      "test": "Create PostgreSQL case with assignments",
+      "passed": true
+    },
+    {
+      "test": "Upload to encrypted object storage",
+      "passed": true
+    },
+    {
+      "test": "Correct original SHA-256",
+      "passed": true
+    },
+    {
+      "test": "Unassigned user cannot see evidence",
+      "passed": true
+    },
+    {
+      "test": "Assigned non-custodian transfer denied",
+      "passed": true
+    },
+    {
+      "test": "Original candidate verified",
+      "passed": true
+    },
+    {
+      "test": "Stored MinIO ciphertext decrypts and verifies",
+      "passed": true
+    },
+    {
+      "test": "Custody moves A to B",
+      "passed": true
+    },
+    {
+      "test": "Modified candidate detected",
+      "passed": true
+    },
+    {
+      "test": "Trusted fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "Authorized download equals original",
+      "passed": true
+    },
+    {
+      "test": "Custody chain valid",
+      "passed": true
+    },
+    {
+      "test": "All core events recorded",
+      "passed": true
+    },
+    {
+      "test": "Audit records match custody events",
+      "passed": true
+    },
+    {
+      "test": "Dashboard records actual alert",
+      "passed": true
+    },
+    {
+      "test": "Expected blockchain connection",
+      "passed": true
+    },
+    {
+      "test": "Every custody event committed to Fabric",
+      "passed": true
+    },
+    {
+      "test": "Logout",
+      "passed": true
+    },
+    {
+      "test": "Logged-out token rejected",
+      "passed": true
+    },
+    {
+      "test": "Read this run's test case before archival",
+      "passed": true
+    },
+    {
+      "test": "Archive only this run's test case",
+      "passed": true
+    },
+    {
+      "test": "Archival preserves case assignments",
+      "passed": true
+    }
+  ],
+  "evidence": {
+    "id": "19e2f80d-e93b-44df-bfad-24d4cc7fa083",
+    "evidence_id": "EVD-DOCKER-d80a1414",
+    "case_id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+    "original_filename": "forensic_report_original.txt",
+    "mime_type": "text/plain",
+    "file_size": 287,
+    "evidence_type": "Forensic Report",
+    "description": "Synthetic Docker integration test",
+    "source": "",
+    "collection_location": "",
+    "collected_at": "",
+    "sha256_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "encryption_metadata": {
+      "algorithm": "AES-256-GCM",
+      "nonce": "first 12 bytes",
+      "aad": "evidence UUID",
+      "key_version": "1"
+    },
+    "uploaded_by": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+    "current_custodian_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+    "status": "REGISTERED",
+    "integrity_status": "UNVERIFIED",
+    "created_at": "2026-10-08T16:02:00.737098+00:00",
+    "timings": {
+      "hash_ms": 0.015458000234502833,
+      "encryption_ms": 1.6593749996900442,
+      "database_ms": 13.98841700029152,
+      "upload_ms": 2188.388959000804
+    },
+    "case_number": "CASE-DOCKER-d80a1414",
+    "case_title": "Docker acceptance \u2014 synthetic investigation",
+    "custodian": "Investigator A",
+    "uploader": "Investigator A",
+    "tags": [
+      "docker-acceptance",
+      "synthetic"
+    ],
+    "blockchain_transactions": [
+      {
+        "id": "ea3856e9-c4d1-406e-ba21-56b7b4bbdaf4",
+        "event_id": "f6fb1558-de1f-49ac-899f-8f86440f2497",
+        "status": "COMMITTED",
+        "tx_id": "7a8d7d22b138b00ce5a035c12f8a6e3d7acf7e50b2172fc50ae5545a590c86ec",
+        "error": null,
+        "elapsed_ms": 2086.690166999688
+      }
+    ],
+    "completed_steps": [
+      "File received",
+      "SHA-256 fingerprint generated",
+      "AES-256-GCM encrypted",
+      "Encrypted evidence stored",
+      "Metadata recorded",
+      "Custody event created"
+    ]
+  },
+  "verification": {
+    "matched": true,
+    "result": "VERIFIED",
+    "message": "EVIDENCE INTEGRITY VERIFIED",
+    "trusted_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "calculated_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "verified_by": "Investigator A",
+    "timestamp": "2026-10-08T16:02:02.861849+00:00",
+    "elapsed_ms": 0.7170419994508848
+  },
+  "tampered": {
+    "matched": false,
+    "result": "INTEGRITY_ALERT",
+    "message": "INTEGRITY VERIFICATION FAILED",
+    "trusted_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "calculated_hash": "7d5bca68817339e524b6e025f6f778afe7fce795f3e29d9ea39f7f49efdfd78c",
+    "verified_by": "Investigator B",
+    "timestamp": "2026-10-08T16:02:09.170321+00:00",
+    "elapsed_ms": 1.87829199967382
+  },
+  "ledger": {
+    "valid": true,
+    "events": 6,
+    "head": "808259b8eb010721e6f0f41ef33854da82279cc257219526ec42d945f463b41b"
+  },
+  "metrics": {
+    "average_hash_ms": 0.005,
+    "average_encryption_ms": 0.201,
+    "average_upload_ms": 2064.004,
+    "average_database_ms": 4.405,
+    "average_verification_ms": 5.123,
+    "average_decryption_ms": 4.248,
+    "average_blockchain_ms": 2043.059
+  },
+  "custody": {
+    "events": [
+      {
+        "id": "f6fb1558-de1f-49ac-899f-8f86440f2497",
+        "evidence_id": "19e2f80d-e93b-44df-bfad-24d4cc7fa083",
+        "case_id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+        "sequence": 1,
+        "event_type": "EVIDENCE_UPLOADED",
+        "actor_user_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T16:02:00.741409+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "description": "Evidence registered and encrypted",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "",
+        "event_hash": "6293aae39fadf2fd5c57d0ce1131dc3591569b14787adaa474a37f74906da8a0",
+        "metadata_json": {
+          "ip": "172.20.0.12",
+          "bytes": 287
+        },
+        "actor": "Investigator A",
+        "from_custodian": null,
+        "to_custodian": "Investigator A",
+        "blockchain": {
+          "id": "ea3856e9-c4d1-406e-ba21-56b7b4bbdaf4",
+          "event_id": "f6fb1558-de1f-49ac-899f-8f86440f2497",
+          "status": "COMMITTED",
+          "tx_id": "7a8d7d22b138b00ce5a035c12f8a6e3d7acf7e50b2172fc50ae5545a590c86ec",
+          "error": null,
+          "elapsed_ms": 2086.690166999688
+        }
+      },
+      {
+        "id": "8d62909c-8f91-4d9b-b19e-952ab5632070",
+        "evidence_id": "19e2f80d-e93b-44df-bfad-24d4cc7fa083",
+        "case_id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+        "sequence": 2,
+        "event_type": "INTEGRITY_VERIFIED",
+        "actor_user_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T16:02:02.860947+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Original fingerprint compared with candidate file",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "6293aae39fadf2fd5c57d0ce1131dc3591569b14787adaa474a37f74906da8a0",
+        "event_hash": "a4f2a81a105e434ab873c3d5f3179f10f2dc5f0081acf7368deb48b88bdbfb3a",
+        "metadata_json": {
+          "result": "VERIFIED",
+          "calculated_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+          "elapsed_ms": 0.7170419994508848,
+          "candidate": "original.txt"
+        },
+        "actor": "Investigator A",
+        "from_custodian": null,
+        "to_custodian": null,
+        "blockchain": {
+          "id": "c36aa87c-34ca-472b-8fe2-a7f77ee4142f",
+          "event_id": "8d62909c-8f91-4d9b-b19e-952ab5632070",
+          "status": "COMMITTED",
+          "tx_id": "3901b0f7dd2cbe64d044b6723530e24e92a584318dfebc29ce5f6eb70600fdef",
+          "error": null,
+          "elapsed_ms": 2097.991376000209
+        }
+      },
+      {
+        "id": "c86a8329-6592-48f4-b410-f9e64cddb470",
+        "evidence_id": "19e2f80d-e93b-44df-bfad-24d4cc7fa083",
+        "case_id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+        "sequence": 3,
+        "event_type": "INTEGRITY_VERIFIED",
+        "actor_user_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T16:02:04.998603+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Original fingerprint compared with decrypted stored evidence",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "a4f2a81a105e434ab873c3d5f3179f10f2dc5f0081acf7368deb48b88bdbfb3a",
+        "event_hash": "8d9963b749afec7f20e0b54a4f5eb5fa64281b8b2e5cc66ee773d185b1ebd2bc",
+        "metadata_json": {
+          "result": "VERIFIED",
+          "calculated_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+          "elapsed_ms": 15.141208999921218,
+          "candidate": "stored original"
+        },
+        "actor": "Investigator A",
+        "from_custodian": null,
+        "to_custodian": null,
+        "blockchain": {
+          "id": "85d8e23e-44dd-47b9-9f21-9abd63cd65c8",
+          "event_id": "c86a8329-6592-48f4-b410-f9e64cddb470",
+          "status": "COMMITTED",
+          "tx_id": "4d5fae59c0a4f022b3a1f75f5b88e49b0322f30447031abbf59602448c3d781f",
+          "error": null,
+          "elapsed_ms": 2083.7162090001584
+        }
+      },
+      {
+        "id": "d923ddbc-71db-40e7-8b9f-eb3189c3ddb5",
+        "evidence_id": "19e2f80d-e93b-44df-bfad-24d4cc7fa083",
+        "case_id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+        "sequence": 4,
+        "event_type": "CUSTODY_TRANSFERRED",
+        "actor_user_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T16:02:07.104019+00:00",
+        "from_custodian_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "to_custodian_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "description": "Docker acceptance forensic handoff",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "8d9963b749afec7f20e0b54a4f5eb5fa64281b8b2e5cc66ee773d185b1ebd2bc",
+        "event_hash": "2f52fa84d05df7447d8a69e820de76ad5dd1a2ea8d425edfbfc5d51a469653bc",
+        "metadata_json": {},
+        "actor": "Investigator A",
+        "from_custodian": "Investigator A",
+        "to_custodian": "Investigator B",
+        "blockchain": {
+          "id": "76963aff-8b93-4107-ac4a-ecb31141e78f",
+          "event_id": "d923ddbc-71db-40e7-8b9f-eb3189c3ddb5",
+          "status": "COMMITTED",
+          "tx_id": "289744bf4073b00517ee30f7be7b6d0d1291e9e279c98b6f83109df3c7630e98",
+          "error": null,
+          "elapsed_ms": 2039.8016259996439
+        }
+      },
+      {
+        "id": "bf5c8972-eda1-4c12-9fec-0607026ac5bd",
+        "evidence_id": "19e2f80d-e93b-44df-bfad-24d4cc7fa083",
+        "case_id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+        "sequence": 5,
+        "event_type": "INTEGRITY_FAILED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T16:02:09.169598+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Original fingerprint compared with candidate file",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "2f52fa84d05df7447d8a69e820de76ad5dd1a2ea8d425edfbfc5d51a469653bc",
+        "event_hash": "26c35a5daf2ab08dbb5b3f2f4450b57302f30293ed727fd6d21dc7920867ff8f",
+        "metadata_json": {
+          "result": "INTEGRITY_ALERT",
+          "calculated_hash": "7d5bca68817339e524b6e025f6f778afe7fce795f3e29d9ea39f7f49efdfd78c",
+          "elapsed_ms": 1.87829199967382,
+          "candidate": "modified.txt"
+        },
+        "actor": "Investigator B",
+        "from_custodian": null,
+        "to_custodian": null,
+        "blockchain": {
+          "id": "c55bab24-5843-4170-9209-a44173248ca2",
+          "event_id": "bf5c8972-eda1-4c12-9fec-0607026ac5bd",
+          "status": "COMMITTED",
+          "tx_id": "20061dfac8900890f3632bdffddb01c873cd9697a538ae4816d662032caf8116",
+          "error": null,
+          "elapsed_ms": 2043.1675010004255
+        }
+      },
+      {
+        "id": "5a2b84be-3605-4ce0-b34e-9fe66cd8c313",
+        "evidence_id": "19e2f80d-e93b-44df-bfad-24d4cc7fa083",
+        "case_id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+        "sequence": 6,
+        "event_type": "EVIDENCE_DOWNLOADED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T16:02:11.229202+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Authorized evidence retrieval prepared",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "26c35a5daf2ab08dbb5b3f2f4450b57302f30293ed727fd6d21dc7920867ff8f",
+        "event_hash": "808259b8eb010721e6f0f41ef33854da82279cc257219526ec42d945f463b41b",
+        "metadata_json": {
+          "decryption_ms": 4.248333000759885
+        },
+        "actor": "Investigator B",
+        "from_custodian": null,
+        "to_custodian": null,
+        "blockchain": {
+          "id": "b234b0c4-289f-40a1-bbf4-308ac44f4045",
+          "event_id": "5a2b84be-3605-4ce0-b34e-9fe66cd8c313",
+          "status": "COMMITTED",
+          "tx_id": "01ca8978c9d56fe0af86c293e8ad473d32925b02267064081df874719b0df6c2",
+          "error": null,
+          "elapsed_ms": 2029.8066259992993
+        }
+      }
+    ],
+    "ledger": {
+      "valid": true,
+      "events": 6,
+      "head": "808259b8eb010721e6f0f41ef33854da82279cc257219526ec42d945f463b41b"
+    }
+  },
+  "blockchain": {
+    "provider": "fabric",
+    "connected": true,
+    "label": "Hyperledger Fabric connected",
+    "database": "postgresql",
+    "storage": "minio",
+    "features": {
+      "Evidence upload": "IMPLEMENTED",
+      "SHA-256 integrity": "IMPLEMENTED",
+      "AES-256-GCM": "IMPLEMENTED",
+      "Custody transfer": "IMPLEMENTED",
+      "Application hash-linked ledger": "IMPLEMENTED",
+      "OCR": "NOT IMPLEMENTED",
+      "RAG search": "DISABLED \u2014 assistance layer not implemented",
+      "MFA": "NOT IMPLEMENTED",
+      "Relationship graph": "NOT IMPLEMENTED"
+    }
+  },
+  "case": {
+    "id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+    "case_number": "CASE-DOCKER-d80a1414",
+    "title": "Docker acceptance \u2014 synthetic investigation",
+    "description": "PostgreSQL and MinIO integration test. No real evidence.",
+    "department": "Cybercrime",
+    "status": "OPEN",
+    "priority": "MEDIUM",
+    "created_by": "d803d69d-b810-415e-b5db-d3d253d07362",
+    "created_at": "2026-10-08T16:02:00.643702+00:00",
+    "evidence_count": 1,
+    "members": [
+      {
+        "id": "d803d69d-b810-415e-b5db-d3d253d07362",
+        "email": "admin@nyayavault.local",
+        "name": "Vault Administrator",
+        "role": "ADMIN"
+      },
+      {
+        "id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "email": "investigatorb@nyayavault.local",
+        "name": "Investigator B",
+        "role": "INVESTIGATOR"
+      },
+      {
+        "id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "email": "investigatora@nyayavault.local",
+        "name": "Investigator A",
+        "role": "INVESTIGATOR"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "19e2f80d-e93b-44df-bfad-24d4cc7fa083",
+        "evidence_id": "EVD-DOCKER-d80a1414",
+        "case_id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+        "original_filename": "forensic_report_original.txt",
+        "mime_type": "text/plain",
+        "file_size": 287,
+        "evidence_type": "Forensic Report",
+        "description": "Synthetic Docker integration test",
+        "source": "",
+        "collection_location": "",
+        "collected_at": "",
+        "sha256_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "encryption_metadata": {
+          "algorithm": "AES-256-GCM",
+          "nonce": "first 12 bytes",
+          "aad": "evidence UUID",
+          "key_version": "1"
+        },
+        "uploaded_by": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "current_custodian_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "status": "TRANSFERRED",
+        "integrity_status": "INTEGRITY_ALERT",
+        "created_at": "2026-10-08T16:02:00.737098+00:00",
+        "timings": {
+          "hash_ms": 0.015458000234502833,
+          "encryption_ms": 1.6593749996900442,
+          "database_ms": 13.98841700029152,
+          "upload_ms": 2188.388959000804
+        },
+        "case_number": "CASE-DOCKER-d80a1414",
+        "case_title": "Docker acceptance \u2014 synthetic investigation",
+        "custodian": "Investigator B",
+        "uploader": "Investigator A",
+        "tags": [
+          "docker-acceptance",
+          "synthetic"
+        ],
+        "blockchain_transactions": [
+          {
+            "id": "ea3856e9-c4d1-406e-ba21-56b7b4bbdaf4",
+            "event_id": "f6fb1558-de1f-49ac-899f-8f86440f2497",
+            "status": "COMMITTED",
+            "tx_id": "7a8d7d22b138b00ce5a035c12f8a6e3d7acf7e50b2172fc50ae5545a590c86ec",
+            "error": null,
+            "elapsed_ms": 2086.690166999688
+          },
+          {
+            "id": "c36aa87c-34ca-472b-8fe2-a7f77ee4142f",
+            "event_id": "8d62909c-8f91-4d9b-b19e-952ab5632070",
+            "status": "COMMITTED",
+            "tx_id": "3901b0f7dd2cbe64d044b6723530e24e92a584318dfebc29ce5f6eb70600fdef",
+            "error": null,
+            "elapsed_ms": 2097.991376000209
+          },
+          {
+            "id": "85d8e23e-44dd-47b9-9f21-9abd63cd65c8",
+            "event_id": "c86a8329-6592-48f4-b410-f9e64cddb470",
+            "status": "COMMITTED",
+            "tx_id": "4d5fae59c0a4f022b3a1f75f5b88e49b0322f30447031abbf59602448c3d781f",
+            "error": null,
+            "elapsed_ms": 2083.7162090001584
+          },
+          {
+            "id": "76963aff-8b93-4107-ac4a-ecb31141e78f",
+            "event_id": "d923ddbc-71db-40e7-8b9f-eb3189c3ddb5",
+            "status": "COMMITTED",
+            "tx_id": "289744bf4073b00517ee30f7be7b6d0d1291e9e279c98b6f83109df3c7630e98",
+            "error": null,
+            "elapsed_ms": 2039.8016259996439
+          },
+          {
+            "id": "c55bab24-5843-4170-9209-a44173248ca2",
+            "event_id": "bf5c8972-eda1-4c12-9fec-0607026ac5bd",
+            "status": "COMMITTED",
+            "tx_id": "20061dfac8900890f3632bdffddb01c873cd9697a538ae4816d662032caf8116",
+            "error": null,
+            "elapsed_ms": 2043.1675010004255
+          },
+          {
+            "id": "b234b0c4-289f-40a1-bbf4-308ac44f4045",
+            "event_id": "5a2b84be-3605-4ce0-b34e-9fe66cd8c313",
+            "status": "COMMITTED",
+            "tx_id": "01ca8978c9d56fe0af86c293e8ad473d32925b02267064081df874719b0df6c2",
+            "error": null,
+            "elapsed_ms": 2029.8066259992993
+          }
+        ]
+      }
+    ]
+  },
+  "case_archive": {
+    "case_id": "bd21b8c3-70d0-4b59-a4d5-6f4ae688c9f4",
+    "case_number": "CASE-DOCKER-d80a1414",
+    "status": "ARCHIVED",
+    "member_ids": [
+      "d803d69d-b810-415e-b5db-d3d253d07362",
+      "2d43ceef-585c-46b8-9131-42fdb4655a73",
+      "3ff734ee-3fc4-48ed-87e7-745026a306fd"
+    ]
+  }
+}

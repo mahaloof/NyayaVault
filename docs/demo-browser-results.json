@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "method": "Manual browser UI via Computer Use",
+  "checks": [
+    {
+      "test": "Administrator login succeeds.",
+      "passed": true
+    },
+    {
+      "test": "Dashboard shows 4 cases, 12 evidence, 10 verified, 1 alert, 7 transfers and 31 committed Fabric transactions.",
+      "passed": true
+    },
+    {
+      "test": "Cases screen shows the four fictional scenarios, correct statuses and three exhibits per case.",
+      "passed": true
+    },
+    {
+      "test": "Archive toggle adds the five old test cases with ARCHIVED status.",
+      "passed": true
+    },
+    {
+      "test": "Evidence screen shows twelve practical exhibits, including one unverified witness note and the camera alert.",
+      "passed": true
+    },
+    {
+      "test": "Archive toggle increases evidence to seventeen, exposing the five preserved old records.",
+      "passed": true
+    },
+    {
+      "test": "Archive toggle disabled again; final browser view shows only the four new investigations.",
+      "passed": true
+    }
+  ],
+  "screenshot": "demo-cases-screenshot.jpg"
+}

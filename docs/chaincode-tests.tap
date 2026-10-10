@@ -1,0 +1,28 @@
+TAP version 13
+# Subtest: register and preserve original fingerprint
+ok 1 - register and preserve original fingerprint
+  ---
+  duration_ms: 0.931041
+  type: 'test'
+  ...
+# Subtest: custody sequence and idempotence
+ok 2 - custody sequence and idempotence
+  ---
+  duration_ms: 0.312291
+  type: 'test'
+  ...
+# Subtest: organization authorization
+ok 3 - organization authorization
+  ---
+  duration_ms: 0.099875
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 116.70225

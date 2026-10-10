@@ -1,0 +1,11 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0308 | Exhibit W3: examination summary
+Inputs: simulated access log, stock reconciliation and internal movement reference.
+Method: compare stated times and item references across supplied training records.
+Result: inventory reconciliation accounts for the reported 24-unit variance.
+Limitations: access records alone do not prove physical movement or user identity.
+Disposition for demonstration: case marked CLOSED; evidence retained for review.
+No real theft allegation or finding against any person is represented.

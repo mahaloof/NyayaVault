@@ -1,0 +1,165 @@
+{
+  "checks": [
+    {
+      "test": "admin login",
+      "passed": true
+    },
+    {
+      "test": "investigatorA login",
+      "passed": true
+    },
+    {
+      "test": "forensic login",
+      "passed": true
+    },
+    {
+      "test": "legal login",
+      "passed": true
+    },
+    {
+      "test": "Investigator uploads assigned evidence",
+      "passed": true
+    },
+    {
+      "test": "Forensic role cannot create cases",
+      "passed": true
+    },
+    {
+      "test": "Forensic role cannot manage users",
+      "passed": true
+    },
+    {
+      "test": "Assigned viewer reads metadata",
+      "passed": true
+    },
+    {
+      "test": "Assigned viewer cannot download",
+      "passed": true
+    },
+    {
+      "test": "Assigned viewer cannot upload",
+      "passed": true
+    },
+    {
+      "test": "Assigned viewer cannot transfer",
+      "passed": true
+    },
+    {
+      "test": "Investigator transfers to forensic case member",
+      "passed": true
+    },
+    {
+      "test": "Forensic officer verifies stored original",
+      "passed": true
+    },
+    {
+      "test": "Forensic officer downloads original",
+      "passed": true
+    },
+    {
+      "test": "Previous custodian cannot transfer again",
+      "passed": true
+    },
+    {
+      "test": "Forensic custodian transfers back",
+      "passed": true
+    },
+    {
+      "test": "Department workflow commits every event",
+      "passed": true
+    },
+    {
+      "test": "Every stored original decrypts and hashes correctly",
+      "passed": true
+    },
+    {
+      "test": "Every application custody chain is valid",
+      "passed": true
+    },
+    {
+      "test": "Every event and transaction ID matches real Fabric history",
+      "passed": true
+    },
+    {
+      "test": "Org1 confirms both organization approvals",
+      "passed": true
+    },
+    {
+      "test": "Org2 confirms both organization approvals",
+      "passed": true
+    },
+    {
+      "test": "Channel retains Org1MSP and Org2MSP",
+      "passed": true
+    },
+    {
+      "test": "Endorsement requires majority of two organizations",
+      "passed": true
+    }
+  ],
+  "inventory": {
+    "evidence": [
+      {
+        "evidence_id": "EVD-DOCKER-d94ee9f1",
+        "events": 6,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "EVD-DOCKER-360662a4",
+        "events": 8,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "EVD-ROLE-c346371a",
+        "events": 6,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "EVD-DOCKER-17febfd1",
+        "events": 6,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      }
+    ],
+    "users": 5,
+    "cases": 5
+  },
+  "peer_definitions": {
+    "Org1": {
+      "sequence": 1,
+      "version": "1.0",
+      "endorsement_plugin": "escc",
+      "validation_plugin": "vscc",
+      "validation_parameter": "EiAvQ2hhbm5lbC9BcHBsaWNhdGlvbi9FbmRvcnNlbWVudA==",
+      "collections": {},
+      "approvals": {
+        "Org1MSP": true,
+        "Org2MSP": true
+      }
+    },
+    "Org2": {
+      "sequence": 1,
+      "version": "1.0",
+      "endorsement_plugin": "escc",
+      "validation_plugin": "vscc",
+      "validation_parameter": "EiAvQ2hhbm5lbC9BcHBsaWNhdGlvbi9FbmRvcnNlbWVudA==",
+      "collections": {},
+      "approvals": {
+        "Org1MSP": true,
+        "Org2MSP": true
+      }
+    }
+  },
+  "role_evidence": "EVD-ROLE-c346371a"
+}

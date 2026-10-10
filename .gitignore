@@ -1,0 +1,31 @@
+.env
+.env.local
+.env.portable
+.env.*
+!.env.example
+transfer/
+.venv/
+node_modules/
+.next/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.db
+*.db-shm
+*.db-wal
+backend/data/
+*.tsbuildinfo
+test-results/
+playwright-report/
+
+# Fabric ledger runtime and private identities
+blockchain/runtime/
+
+# Private recovery packages, local machine metadata and credentials
+*.zip
+*.dump
+*.tgz
+*.pem
+*.key
+.DS_Store
+cleanup-recovery/

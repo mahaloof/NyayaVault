@@ -1,0 +1,207 @@
+{
+  "label": "Fictional real-world-style demonstration",
+  "cases": [
+    {
+      "case_number": "NV-2026-0142",
+      "title": "Supplier invoice diversion — Aster Office Supplies",
+      "department": "Cybercrime Division",
+      "priority": "HIGH",
+      "status": "UNDER_INVESTIGATION",
+      "description": "Fictional demo: an accounts clerk reports a ₹4,80,000 supplier payment redirected after an altered invoice arrived by email. Compare the message headers, payment authorization and workstation findings; the allegation remains under investigation.",
+      "lead": "investigatorA",
+      "evidence": [
+        {
+          "evidence_id": "NV-0142-EMAIL",
+          "filename": "supplier_email_headers.txt",
+          "evidence_type": "Digital Log",
+          "description": "Fictional demo. Suspected invoice-diversion message and header extract",
+          "source": "Fictional mailbox export supplied by accounts custodian",
+          "collection_location": "Aster office — finance workstation",
+          "collected_at": "2026-10-05T10:20:00+05:30",
+          "transfer_to": "forensic",
+          "verify": true,
+          "mismatch": false
+        },
+        {
+          "evidence_id": "NV-0142-PAYMENT",
+          "filename": "payment_authorization_summary.txt",
+          "evidence_type": "Court Document",
+          "description": "Fictional demo. Fictional payment instruction and reconciliation record",
+          "source": "Fictional finance department record",
+          "collection_location": "Aster office — records desk",
+          "collected_at": "2026-10-05T11:05:00+05:30",
+          "transfer_to": null,
+          "verify": true,
+          "mismatch": false
+        },
+        {
+          "evidence_id": "NV-0142-FORENSIC",
+          "filename": "mailbox_triage_findings.txt",
+          "evidence_type": "Forensic Report",
+          "description": "Fictional demo. Preliminary mailbox triage findings for invoice diversion",
+          "source": "Forensic laboratory training worksheet",
+          "collection_location": "Digital Forensics Lab — bench 2",
+          "collected_at": "2026-10-06T14:30:00+05:30",
+          "transfer_to": "forensic",
+          "verify": true,
+          "mismatch": false
+        }
+      ]
+    },
+    {
+      "case_number": "NV-2026-0217",
+      "title": "Night-time collision — Riverside Junction",
+      "department": "Traffic Investigation Unit",
+      "priority": "CRITICAL",
+      "status": "UNDER_INVESTIGATION",
+      "description": "Fictional demo: a delivery rider reports a night-time collision at Riverside Junction. Correlate camera timing, a witness account and scene notes. A later camera transcript differs from the preserved original, providing an integrity-alert scenario.",
+      "lead": "investigatorB",
+      "evidence": [
+        {
+          "evidence_id": "NV-0217-CAMERA",
+          "filename": "junction_camera_observation.txt",
+          "evidence_type": "Digital Log",
+          "description": "Fictional demo. Preserved camera observation transcript; no actual video included",
+          "source": "Fictional junction camera review desk",
+          "collection_location": "Riverside Junction — camera RJ-03",
+          "collected_at": "2026-10-05T08:15:00+05:30",
+          "transfer_to": "forensic",
+          "verify": true,
+          "mismatch": true
+        },
+        {
+          "evidence_id": "NV-0217-WITNESS",
+          "filename": "witness_interview_note.txt",
+          "evidence_type": "Court Document",
+          "description": "Fictional demo. Initial witness interview note awaiting corroboration",
+          "source": "Fictional witness interview training exercise",
+          "collection_location": "Traffic unit — interview room 1",
+          "collected_at": "2026-10-05T09:40:00+05:30",
+          "transfer_to": null,
+          "verify": false,
+          "mismatch": false
+        },
+        {
+          "evidence_id": "NV-0217-SCENE",
+          "filename": "junction_scene_record.txt",
+          "evidence_type": "Forensic Report",
+          "description": "Fictional demo. Scene measurements and collection notes",
+          "source": "Fictional traffic scene worksheet",
+          "collection_location": "Riverside Junction — east crossing",
+          "collected_at": "2026-10-05T00:10:00+05:30",
+          "transfer_to": null,
+          "verify": true,
+          "mismatch": false
+        }
+      ]
+    },
+    {
+      "case_number": "NV-2026-0308",
+      "title": "Missing stock — Meridian Logistics warehouse",
+      "department": "Property Crime Unit",
+      "priority": "MEDIUM",
+      "status": "CLOSED",
+      "description": "Fictional demo: twenty-four handheld scanners were reported missing after a loading-bay shift. Review access logs, the stock discrepancy and a final examination note. The case is closed for demonstration after an inventory reconciliation, with evidence retained.",
+      "lead": "investigatorA",
+      "evidence": [
+        {
+          "evidence_id": "NV-0308-ACCESS",
+          "filename": "loading_bay_access_log.txt",
+          "evidence_type": "Digital Log",
+          "description": "Fictional demo. Badge-reader activity around the disputed loading window",
+          "source": "Fictional access-control export",
+          "collection_location": "Meridian warehouse — loading bay B",
+          "collected_at": "2026-10-03T09:00:00+05:30",
+          "transfer_to": "forensic",
+          "verify": true,
+          "mismatch": false
+        },
+        {
+          "evidence_id": "NV-0308-STOCK",
+          "filename": "stock_reconciliation.txt",
+          "evidence_type": "Court Document",
+          "description": "Fictional demo. Stock count and later location reconciliation",
+          "source": "Fictional warehouse inventory record",
+          "collection_location": "Meridian warehouse — inventory desk",
+          "collected_at": "2026-10-03T10:30:00+05:30",
+          "transfer_to": null,
+          "verify": true,
+          "mismatch": false
+        },
+        {
+          "evidence_id": "NV-0308-REVIEW",
+          "filename": "warehouse_examination_note.txt",
+          "evidence_type": "Forensic Report",
+          "description": "Fictional demo. Final review of inventory and access timeline",
+          "source": "Forensic laboratory training note",
+          "collection_location": "Digital Forensics Lab — bench 1",
+          "collected_at": "2026-10-04T15:00:00+05:30",
+          "transfer_to": "forensic",
+          "verify": true,
+          "mismatch": false
+        }
+      ]
+    },
+    {
+      "case_number": "NV-2026-0419",
+      "title": "Ransomware incident — Community Skills Centre",
+      "department": "Cybercrime & Digital Forensics",
+      "priority": "HIGH",
+      "status": "OPEN",
+      "description": "Fictional demo: a training centre reports unavailable shared files and an extortion message on one workstation. Preserve the incident log, endpoint timeline and triage note while examining the entry point and recovery options. No malware is included.",
+      "lead": "investigatorB",
+      "evidence": [
+        {
+          "evidence_id": "NV-0419-INCIDENT",
+          "filename": "incident_response_log.txt",
+          "evidence_type": "Digital Log",
+          "description": "Fictional demo. Initial incident and containment timeline",
+          "source": "Fictional service-desk exercise",
+          "collection_location": "Community Skills Centre — IT desk",
+          "collected_at": "2026-10-06T09:15:00+05:30",
+          "transfer_to": null,
+          "verify": true,
+          "mismatch": false
+        },
+        {
+          "evidence_id": "NV-0419-ENDPOINT",
+          "filename": "endpoint_timeline.txt",
+          "evidence_type": "Digital Log",
+          "description": "Fictional demo. Simulated endpoint process and file activity timeline",
+          "source": "Fictional endpoint-monitor export",
+          "collection_location": "Community Skills Centre — workstation LAB-04",
+          "collected_at": "2026-10-06T10:00:00+05:30",
+          "transfer_to": "forensic",
+          "verify": true,
+          "mismatch": false
+        },
+        {
+          "evidence_id": "NV-0419-TRIAGE",
+          "filename": "ransomware_triage_note.txt",
+          "evidence_type": "Forensic Report",
+          "description": "Fictional demo. Preliminary preservation and recovery assessment",
+          "source": "Forensic laboratory exercise worksheet",
+          "collection_location": "Digital Forensics Lab — isolated bench",
+          "collected_at": "2026-10-06T16:00:00+05:30",
+          "transfer_to": "forensic",
+          "verify": true,
+          "mismatch": false
+        }
+      ]
+    }
+  ],
+  "retire_case_numbers": [
+    "CASE-2026-001",
+    "CASE-DOCKER-360662a4",
+    "CASE-DOCKER-17febfd1",
+    "CASE-DOCKER-d94ee9f1",
+    "CASE-ROLE-cf3eb29b"
+  ],
+  "retire_evidence_ids": [
+    "EVD-DOCKER-d94ee9f1",
+    "EVD-DOCKER-360662a4",
+    "EVD-ROLE-c346371a",
+    "EVD-DOCKER-17febfd1",
+    "EVD-QA-20261007-926048"
+  ]
+}

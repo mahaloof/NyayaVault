@@ -1,0 +1,46 @@
+{
+  "evidence": [
+    {
+      "evidence_id": "EVD-DOCKER-d94ee9f1",
+      "events": 6,
+      "chain_valid": true,
+      "peer_matches": true,
+      "ciphertext": true,
+      "stored_original_valid": true
+    },
+    {
+      "evidence_id": "EVD-DOCKER-360662a4",
+      "events": 8,
+      "chain_valid": true,
+      "peer_matches": true,
+      "ciphertext": true,
+      "stored_original_valid": true
+    },
+    {
+      "evidence_id": "EVD-ROLE-c346371a",
+      "events": 6,
+      "chain_valid": true,
+      "peer_matches": true,
+      "ciphertext": true,
+      "stored_original_valid": true
+    },
+    {
+      "evidence_id": "EVD-DOCKER-17febfd1",
+      "events": 6,
+      "chain_valid": true,
+      "peer_matches": true,
+      "ciphertext": true,
+      "stored_original_valid": true
+    },
+    {
+      "evidence_id": "EVD-QA-20261007-926048",
+      "events": 9,
+      "chain_valid": true,
+      "peer_matches": true,
+      "ciphertext": true,
+      "stored_original_valid": true
+    }
+  ],
+  "users": 5,
+  "cases": 5
+}

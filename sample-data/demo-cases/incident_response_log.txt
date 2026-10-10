@@ -1,0 +1,13 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0419 | Exhibit R1: incident response log
+Asset: DEMO-PC-LAB-04; exercise network: 192.0.2.0/24.
+08:42 IST: user reports shared teaching files cannot be opened.
+08:46 IST: service desk records an on-screen extortion message; text is not reproduced.
+08:50 IST: workstation isolated from the exercise network.
+08:56 IST: removable media inventory documented; no media reconnected.
+09:02 IST: backup catalogue copied for later verification.
+09:15 IST: log exported for the fictional investigating team.
+No malicious executable, ransom contact, payment address or live endpoint is included.

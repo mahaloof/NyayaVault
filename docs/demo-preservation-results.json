@@ -1,0 +1,338 @@
+{
+  "status": "passed",
+  "read_only": true,
+  "checks": [
+    {
+      "test": "A private pre-refresh baseline exists",
+      "passed": true
+    },
+    {
+      "test": "Baseline contains the original five evidence records",
+      "passed": true
+    },
+    {
+      "test": "Every stored original decrypts, hashes correctly and is AES-GCM ciphertext",
+      "passed": true
+    },
+    {
+      "test": "Every local custody chain is valid",
+      "passed": true
+    },
+    {
+      "test": "Every event and original transaction ID matches real Fabric history",
+      "passed": true
+    },
+    {
+      "test": "All five original evidence records remain present",
+      "passed": true
+    },
+    {
+      "test": "All original evidence metadata and transaction submission records are unchanged",
+      "passed": true
+    },
+    {
+      "test": "Complete original custody records and chain anchors are unchanged",
+      "passed": true
+    },
+    {
+      "test": "All original committed transaction references are unchanged",
+      "passed": true
+    },
+    {
+      "test": "Org1 confirms both organization approvals",
+      "passed": true
+    },
+    {
+      "test": "Org2 confirms both organization approvals",
+      "passed": true
+    },
+    {
+      "test": "Channel retains Org1MSP and Org2MSP",
+      "passed": true
+    },
+    {
+      "test": "Endorsement requires majority of the two organizations",
+      "passed": true
+    }
+  ],
+  "completed_at": "2026-10-08T14:50:08.683235+00:00",
+  "private_baseline": "blockchain/runtime/demo-refresh-backups/20261008T144632Z-a162e1c6/baseline.json",
+  "baseline_captured_at": "2026-10-08T14:46:32.643676+00:00",
+  "inventory": {
+    "evidence": [
+      {
+        "evidence_id": "EVD-DOCKER-17febfd1",
+        "events": 6,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "EVD-DOCKER-360662a4",
+        "events": 8,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "EVD-DOCKER-d94ee9f1",
+        "events": 6,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "EVD-QA-20261007-926048",
+        "events": 13,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "EVD-ROLE-c346371a",
+        "events": 6,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0142-EMAIL",
+        "events": 3,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0142-FORENSIC",
+        "events": 3,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0142-PAYMENT",
+        "events": 2,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0217-CAMERA",
+        "events": 4,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0217-SCENE",
+        "events": 2,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0217-WITNESS",
+        "events": 1,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0308-ACCESS",
+        "events": 3,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0308-REVIEW",
+        "events": 3,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0308-STOCK",
+        "events": 2,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0419-ENDPOINT",
+        "events": 3,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0419-INCIDENT",
+        "events": 2,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      },
+      {
+        "evidence_id": "NV-0419-TRIAGE",
+        "events": 3,
+        "chain_valid": true,
+        "peer_matches": true,
+        "ciphertext": true,
+        "stored_original_valid": true
+      }
+    ],
+    "preservation": [
+      {
+        "evidence_id": "EVD-DOCKER-17febfd1",
+        "id": "11ccbeae-d8f8-4033-bfbe-0886fa6b13a2",
+        "metadata_unchanged": true,
+        "changed_metadata_fields": [],
+        "custody_unchanged": true,
+        "original_events": 6,
+        "original_transaction_ids": [
+          "8ae9e12e3cdf6520b5bc1b26d68f91fe32012ce9ec78d56d0a56ca323de55fac",
+          "91ac4bb26cc81963f242f823aa99ce2078d0ff057a8f17456bea6cab831b36a9",
+          "90c3ff1b4a95ed621630064c194a6c803e3f482dd4085b9d45caa845fc0fad45",
+          "35968a59e70dc1ced94beec32cf1d85c29a404bce85cb676e12abf89ceddfbb4",
+          "814ee228e0bbac8415d79b05e2ea63f43ed2e825c305d9ee6e2be4a3243e27f1",
+          "9514cb5009d2e04d72b0a4e8bf6bbc0ef70f4cbd2466bb9fe32021027d44d33b"
+        ],
+        "transaction_ids_unchanged": true
+      },
+      {
+        "evidence_id": "EVD-DOCKER-360662a4",
+        "id": "65c9c79e-e8da-4b4f-b36e-88c53f252e9c",
+        "metadata_unchanged": true,
+        "changed_metadata_fields": [],
+        "custody_unchanged": true,
+        "original_events": 8,
+        "original_transaction_ids": [
+          "2b6928931eee7c35cc7b436c2c061482ffb20310fe2296d99860da5050ae0765",
+          "1bab1e944abeac93de7623ced04c3cc05db2d468039b667fdbea4fb3a383a6de",
+          "e55dd941469b742e0ae3a7915a2c29e4bb3516a25a798d0d5379d8cfaa2daa1d",
+          "9fbdb4d38a4a8909426ad30f2e83254c3c42e6ca378b2e022bc07340553c2ffa",
+          "40f26ea79ea21b89280935c75ee68b9a3f3b56c615a4d245e890a8cc3fd3abb1",
+          "8d9eba245bc39c019dab59fb8b7d7d0c357d0ff81094cf935d7227b0518f3d0c",
+          "9cbafc598fcf00a3ea6794c6d74c18ff30aee4b14fa904fd412bd38a93a9048e",
+          "bbe1da1ca88fcc6bb560941bad05620eee3368e82d9ca2fc7d209e16498dd143"
+        ],
+        "transaction_ids_unchanged": true
+      },
+      {
+        "evidence_id": "EVD-DOCKER-d94ee9f1",
+        "id": "d64d4ffb-85c0-4668-a12f-1be99b21eeb6",
+        "metadata_unchanged": true,
+        "changed_metadata_fields": [],
+        "custody_unchanged": true,
+        "original_events": 6,
+        "original_transaction_ids": [
+          "2849c398c095824ed2636c5ebe63963dae2f77b8332497b188d73a9a48d255a8",
+          "a49767f456658c5d06b0073298f8b277f575c2bcacd4ca1e40bf9b8e2a67b53d",
+          "445dec7e7ac5dfe58d5e5e00a7ab81387a5e3ac41880921ec366afc0ce0bb58a",
+          "f0895ab554d9a1e49d477e786bc05613c56e36cb3c060a5a8f22b6cb044321d6",
+          "b0250b9d6b3b645f690214ab50439a3243972cd7e5fc9d27efc6c9b2f54dfbbd",
+          "2d553e824a58a274a2d0e1241469a893ea00e6753e68bd15160d7cf65011ea0c"
+        ],
+        "transaction_ids_unchanged": true
+      },
+      {
+        "evidence_id": "EVD-QA-20261007-926048",
+        "id": "81c07257-38d9-4a88-bc18-1571d510af4a",
+        "metadata_unchanged": true,
+        "changed_metadata_fields": [],
+        "custody_unchanged": true,
+        "original_events": 13,
+        "original_transaction_ids": [
+          "3bb13f040cc9f69afa38a6111974cdda612c3f387ebd05a747d943d7954ef3b8",
+          "5a4d91654fa03683d5692475c9b05c11746e94d42357ef5cbc33a6a2bbfbadf6",
+          "82d713244592808f47fe3b1ec68f0780cd76aa31f3f6ee582a3eff9598862949",
+          "a40e6ac1a40fee6150edf05644beb35cc3af569241a36e4ae267b3a4f7e24a8f",
+          "7a1a30f051da75931430518e0677b6f792765638c016fffefb1f63402472edcf",
+          "7e8950c1784b8d46a5c3f94b0591967c55c265dd0ad7b5c46e178c0d65638030",
+          "291b1bbfd63d584d55b1471098476c3a2e0f76ded264b470c426994e4b1831ce",
+          "4a18837d83b2a5b0b5bc4d32c2b5c04ae36be50f26122be2238ba381fe9ca1bc",
+          "5a1bbf5dfa592b2de7ba7d11198fc089bac5358a03cc3463386250e8e6b11068",
+          "daec1fb6d0d3fd43a79d910d7476ba1ed4f6438228c9ed22b5250a49cec911a8",
+          "5a2b471e849e5a3d9e78bbcf35ebcc00c9ee97bed6246627abd8f1ed5b41c954",
+          "fb29b61d41a7b66be7c376e9ca24fc63a75176a8b60edaeadac78d7cac384c01",
+          "ad31228fa214614b7110bc27757b43cc9cfb3021e88b4303b0d63cd9c3b3f593"
+        ],
+        "transaction_ids_unchanged": true
+      },
+      {
+        "evidence_id": "EVD-ROLE-c346371a",
+        "id": "bd7e7a0b-b220-4568-a6a4-e2f6d80ed586",
+        "metadata_unchanged": true,
+        "changed_metadata_fields": [],
+        "custody_unchanged": true,
+        "original_events": 6,
+        "original_transaction_ids": [
+          "af438d774eda031b42b42ccf836d40cbd1061154881abfef474b601c5c98026b",
+          "04f4941f3ab7417856565580b04956862aad7cfcee3dfc9d69d1442858e683aa",
+          "8f5f1209a157c9eefb8bdfd30dd23140f8e5778ba2a447753f850ba14ae07cec",
+          "69ba0108785b2cc70e571ba33f906a53c03d51c956262d545900323e8fd6fbb4",
+          "2bc23d4ab8784e8fad116b0c563d2874c6fbb29c678b325fd17b7874b89ef9c6",
+          "9c433a081897fac6c212b62989583201bc0f3936867e2f66dcae4b9bb3b37e9d"
+        ],
+        "transaction_ids_unchanged": true
+      }
+    ],
+    "users": 5,
+    "cases": 9,
+    "active_cases": 4,
+    "archived_cases": 5,
+    "total_events": 70
+  },
+  "peer_definitions": {
+    "Org1": {
+      "sequence": 1,
+      "version": "1.0",
+      "endorsement_plugin": "escc",
+      "validation_plugin": "vscc",
+      "validation_parameter": "EiAvQ2hhbm5lbC9BcHBsaWNhdGlvbi9FbmRvcnNlbWVudA==",
+      "collections": {},
+      "approvals": {
+        "Org1MSP": true,
+        "Org2MSP": true
+      }
+    },
+    "Org2": {
+      "sequence": 1,
+      "version": "1.0",
+      "endorsement_plugin": "escc",
+      "validation_plugin": "vscc",
+      "validation_parameter": "EiAvQ2hhbm5lbC9BcHBsaWNhdGlvbi9FbmRvcnNlbWVudA==",
+      "collections": {},
+      "approvals": {
+        "Org1MSP": true,
+        "Org2MSP": true
+      }
+    }
+  },
+  "channel": {
+    "organizations": [
+      "Org1MSP",
+      "Org2MSP"
+    ],
+    "endorsement": {
+      "rule": "MAJORITY",
+      "sub_policy": "Endorsement"
+    }
+  }
+}

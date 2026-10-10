@@ -1,0 +1,17 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0142 | Exhibit A2: payment authorization summary
+Document type: training copy of an internal payment record
+Invoice reference: DEMO-INV-1042
+Authorized value: INR 480,000.00
+Beneficiary reference on original vendor register: DEMO-VENDOR-07
+Beneficiary reference on revised instruction: DEMO-BENEFICIARY-19
+Payment reference: DEMO-TXN-1004-07 (not a real banking identifier)
+Reported instruction time: 2026-10-04 16:10 IST
+Reported settlement time: 2026-10-04 16:32 IST
+Discrepancy reported: 2026-10-05 09:30 IST
+Two-person approval: one simulated preparer and one simulated authorizer.
+Reconciliation status: disputed; no statement of recovery or responsibility.
+Scope: summary only; no genuine bank statement or customer details included.

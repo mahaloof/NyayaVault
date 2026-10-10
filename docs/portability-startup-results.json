@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "Every original Fabric identity, certificate and signing key matches the snapshot",
+      "passed": true,
+      "files": 134
+    },
+    {
+      "test": "fresh both peers committed expected portable lifecycle definition",
+      "passed": true,
+      "version": "1.0-portable",
+      "sequence": 1
+    },
+    {
+      "test": "restored both peers committed expected portable lifecycle definition",
+      "passed": true,
+      "version": "1.0-portable",
+      "sequence": 2
+    },
+    {
+      "test": "New network initializes and commits on the first attempt",
+      "passed": true
+    },
+    {
+      "test": "Imported default start retains the existing demo marker",
+      "passed": true
+    },
+    {
+      "test": "Fresh demo repeat retains the marker",
+      "passed": true
+    },
+    {
+      "test": "Portable export completes and restarts all source services",
+      "passed": true
+    },
+    {
+      "test": "Original source network retains version1.0 sequence1",
+      "passed": true
+    }
+  ]
+}

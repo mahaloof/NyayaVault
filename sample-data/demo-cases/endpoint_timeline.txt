@@ -1,0 +1,14 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0419 | Exhibit R2: endpoint timeline
+Host: DEMO-PC-LAB-04; account reference: DEMO-LOCAL-USER-3.
+08:31:10 IST | email attachment opened | training-document.docx
+08:34:21 IST | unexpected process alert | DEMO-PROCESS-X
+08:36:03 IST | rapid file rename activity | teaching-share sample folder
+08:39:44 IST | backup service stopped | cause under investigation
+08:42:07 IST | user report | teaching files inaccessible
+Entries are invented observations, not executable commands or malware instructions.
+Attribution: undetermined. Correlation of events is not proof of causation.
+Next step: validate timestamps against a preserved disk image and authorized logs.

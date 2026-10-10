@@ -1,0 +1,10 @@
+{
+  "database": "postgresql",
+  "storage": "minio",
+  "ciphertext_bytes": 315,
+  "plaintext_bytes": 287,
+  "encrypted_object": true,
+  "decrypted_hash_matches": true,
+  "immutable_fingerprint": true,
+  "append_only_custody": true
+}

@@ -1,0 +1,18 @@
+{
+  "provider": "development",
+  "connected": false,
+  "label": "Development Tamper-Evident Ledger",
+  "database": "postgresql",
+  "storage": "minio",
+  "features": {
+    "Evidence upload": "IMPLEMENTED",
+    "SHA-256 integrity": "IMPLEMENTED",
+    "AES-256-GCM": "IMPLEMENTED",
+    "Custody transfer": "IMPLEMENTED",
+    "Application hash-linked ledger": "IMPLEMENTED",
+    "OCR": "NOT IMPLEMENTED",
+    "RAG search": "DISABLED \u2014 assistance layer not implemented",
+    "MFA": "NOT IMPLEMENTED",
+    "Relationship graph": "NOT IMPLEMENTED"
+  }
+}

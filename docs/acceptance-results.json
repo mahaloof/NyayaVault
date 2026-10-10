@@ -1,0 +1,399 @@
+{
+  "original": {
+    "matched": true,
+    "result": "VERIFIED",
+    "message": "EVIDENCE INTEGRITY VERIFIED",
+    "trusted_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "calculated_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "verified_by": "Investigator A",
+    "timestamp": "2026-10-08T14:45:15.187188+00:00",
+    "elapsed_ms": 0.3071669489145279
+  },
+  "modified": {
+    "matched": false,
+    "result": "INTEGRITY_ALERT",
+    "message": "INTEGRITY VERIFICATION FAILED",
+    "trusted_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "calculated_hash": "7d5bca68817339e524b6e025f6f778afe7fce795f3e29d9ea39f7f49efdfd78c",
+    "verified_by": "Investigator B",
+    "timestamp": "2026-10-08T14:45:15.199037+00:00",
+    "elapsed_ms": 0.25454198475927114
+  },
+  "custody_ledger": {
+    "valid": true,
+    "events": 4,
+    "head": "368c1a2b8b47ac32e425a84a9db5bda80a7c45e99403bd1c9720f0547ab7da19"
+  },
+  "upload_timings": {
+    "hash_ms": 0.003249966539442539,
+    "encryption_ms": 0.0237500062212348,
+    "database_ms": 1.7513749771751463,
+    "upload_ms": 2.5554579915478826
+  },
+  "dashboard": {
+    "total_cases": 2,
+    "total_evidence": 3,
+    "verified": 0,
+    "alerts": 1,
+    "transfers": 1,
+    "verification_attempts": 2,
+    "successful_verifications": 1,
+    "detected_mismatches": 1,
+    "blockchain_transactions": 0,
+    "failed_blockchain_transactions": 0,
+    "metrics": {
+      "average_hash_ms": 0.003,
+      "average_encryption_ms": 0.31,
+      "average_upload_ms": 3.83,
+      "average_database_ms": 2.359,
+      "average_verification_ms": 0.281,
+      "average_decryption_ms": 0.087,
+      "average_blockchain_ms": null
+    },
+    "evidence_types": {
+      "Document": 3
+    },
+    "recent_evidence": [
+      {
+        "id": "b759e694-93e8-4bc7-9a0a-871ab67707da",
+        "evidence_id": "EVD-3e123a4b6f",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "original_filename": "report.txt",
+        "mime_type": "text/plain",
+        "file_size": 287,
+        "evidence_type": "Document",
+        "description": "",
+        "source": "",
+        "collection_location": "",
+        "collected_at": "",
+        "sha256_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "encryption_metadata": {
+          "algorithm": "AES-256-GCM",
+          "nonce": "first 12 bytes",
+          "aad": "evidence UUID",
+          "key_version": "1"
+        },
+        "uploaded_by": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "current_custodian_id": "d9966cc1-5416-4045-9516-680316709eeb",
+        "status": "TRANSFERRED",
+        "integrity_status": "INTEGRITY_ALERT",
+        "created_at": "2026-10-08T14:45:15.182265+00:00",
+        "timings": {
+          "hash_ms": 0.003249966539442539,
+          "encryption_ms": 0.0237500062212348,
+          "database_ms": 1.7513749771751463,
+          "upload_ms": 2.5554579915478826
+        },
+        "case_number": "CASE-44186249ad",
+        "case_title": "Test investigation",
+        "custodian": "Investigator B",
+        "uploader": "Investigator A",
+        "tags": [
+          "demo",
+          "device-a"
+        ],
+        "blockchain_transactions": [
+          {
+            "id": "4d8474bf-a061-4fe4-bb6b-1eb53939f101",
+            "event_id": "623fb132-2dc6-47de-8aac-b34b5b935300",
+            "status": "DEVELOPMENT",
+            "tx_id": null,
+            "error": null,
+            "elapsed_ms": 0.0
+          },
+          {
+            "id": "b2dfabb0-063b-4db2-871b-9b432123c0b8",
+            "event_id": "09166daf-6994-4d02-9f9c-bf692d03091a",
+            "status": "DEVELOPMENT",
+            "tx_id": null,
+            "error": null,
+            "elapsed_ms": 0.0
+          },
+          {
+            "id": "e5953117-15a8-4e2e-a500-82d4df86bd8e",
+            "event_id": "0830099a-95fb-49e0-b1fb-223cae074fc4",
+            "status": "DEVELOPMENT",
+            "tx_id": null,
+            "error": null,
+            "elapsed_ms": 0.0
+          },
+          {
+            "id": "e47421a7-b0f2-4e01-9ecf-f3d6dc2572f9",
+            "event_id": "ffd8af7e-ac65-4bff-8dc1-31a33a39b75c",
+            "status": "DEVELOPMENT",
+            "tx_id": null,
+            "error": null,
+            "elapsed_ms": 0.0
+          }
+        ]
+      },
+      {
+        "id": "f5f0abd8-0df5-446c-9d7d-31393607c2ce",
+        "evidence_id": "EVD-4573632b90",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "original_filename": "report.txt",
+        "mime_type": "text/plain",
+        "file_size": 287,
+        "evidence_type": "Document",
+        "description": "",
+        "source": "",
+        "collection_location": "",
+        "collected_at": "",
+        "sha256_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "encryption_metadata": {
+          "algorithm": "AES-256-GCM",
+          "nonce": "first 12 bytes",
+          "aad": "evidence UUID",
+          "key_version": "1"
+        },
+        "uploaded_by": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "current_custodian_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "status": "REGISTERED",
+        "integrity_status": "UNVERIFIED",
+        "created_at": "2026-10-08T14:45:15.096740+00:00",
+        "timings": {
+          "hash_ms": 0.00204198295250535,
+          "encryption_ms": 0.02941599814221263,
+          "database_ms": 1.622707990463823,
+          "upload_ms": 2.400500001385808
+        },
+        "case_number": "CASE-44186249ad",
+        "case_title": "Test investigation",
+        "custodian": "Investigator A",
+        "uploader": "Investigator A",
+        "tags": [
+          "demo",
+          "device-a"
+        ],
+        "blockchain_transactions": [
+          {
+            "id": "dc055eb7-fcae-48ed-bc85-6b8954607041",
+            "event_id": "a28eed14-1185-40ff-a84f-ede1770a444f",
+            "status": "DEVELOPMENT",
+            "tx_id": null,
+            "error": null,
+            "elapsed_ms": 0.0
+          }
+        ]
+      },
+      {
+        "id": "37a0a159-5adb-488f-a2d9-881f234d3047",
+        "evidence_id": "EVD-fd1eafc520",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "original_filename": "report.txt",
+        "mime_type": "text/plain",
+        "file_size": 287,
+        "evidence_type": "Document",
+        "description": "",
+        "source": "",
+        "collection_location": "",
+        "collected_at": "",
+        "sha256_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "encryption_metadata": {
+          "algorithm": "AES-256-GCM",
+          "nonce": "first 12 bytes",
+          "aad": "evidence UUID",
+          "key_version": "1"
+        },
+        "uploaded_by": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "current_custodian_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "status": "REGISTERED",
+        "integrity_status": "UNVERIFIED",
+        "created_at": "2026-10-08T14:45:15.045483+00:00",
+        "timings": {
+          "hash_ms": 0.0026249908842146397,
+          "encryption_ms": 0.8773329900577664,
+          "database_ms": 3.702583024278283,
+          "upload_ms": 6.535499996971339
+        },
+        "case_number": "CASE-44186249ad",
+        "case_title": "Test investigation",
+        "custodian": "Investigator A",
+        "uploader": "Investigator A",
+        "tags": [
+          "demo",
+          "device-a"
+        ],
+        "blockchain_transactions": [
+          {
+            "id": "69e15f64-f935-43d5-85ba-ede44e9d1eb9",
+            "event_id": "f2b7b049-976f-46e9-98e1-927ffbf56288",
+            "status": "DEVELOPMENT",
+            "tx_id": null,
+            "error": null,
+            "elapsed_ms": 0.0
+          },
+          {
+            "id": "e92ad002-ed29-49f0-8c89-8d09aaa3dc3c",
+            "event_id": "39b1869b-6b41-477e-b9c0-e5e1e3b8fe2e",
+            "status": "DEVELOPMENT",
+            "tx_id": null,
+            "error": null,
+            "elapsed_ms": 0.0
+          }
+        ]
+      }
+    ],
+    "recent_activity": [
+      {
+        "id": "ffd8af7e-ac65-4bff-8dc1-31a33a39b75c",
+        "evidence_id": "b759e694-93e8-4bc7-9a0a-871ab67707da",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "sequence": 4,
+        "event_type": "INTEGRITY_FAILED",
+        "actor_user_id": "d9966cc1-5416-4045-9516-680316709eeb",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:45:15.198803+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Original fingerprint compared with candidate file",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "e49e92baf62ba5243683a390103ca645a1d65b4a1ad90b6a8cc179bae5779cba",
+        "event_hash": "368c1a2b8b47ac32e425a84a9db5bda80a7c45e99403bd1c9720f0547ab7da19",
+        "metadata_json": {
+          "result": "INTEGRITY_ALERT",
+          "calculated_hash": "7d5bca68817339e524b6e025f6f778afe7fce795f3e29d9ea39f7f49efdfd78c",
+          "elapsed_ms": 0.25454198475927114,
+          "candidate": "modified.txt"
+        },
+        "actor": "Investigator B",
+        "evidence_label": "EVD-3e123a4b6f"
+      },
+      {
+        "id": "0830099a-95fb-49e0-b1fb-223cae074fc4",
+        "evidence_id": "b759e694-93e8-4bc7-9a0a-871ab67707da",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "sequence": 3,
+        "event_type": "CUSTODY_TRANSFERRED",
+        "actor_user_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:45:15.195023+00:00",
+        "from_custodian_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "to_custodian_id": "d9966cc1-5416-4045-9516-680316709eeb",
+        "description": "Forensic examination",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "48aa3d89f2374aedbd3041e14844c9c6232fa01d5578ee744fd8e11bc5046448",
+        "event_hash": "e49e92baf62ba5243683a390103ca645a1d65b4a1ad90b6a8cc179bae5779cba",
+        "metadata_json": {},
+        "actor": "Investigator A",
+        "evidence_label": "EVD-3e123a4b6f"
+      },
+      {
+        "id": "09166daf-6994-4d02-9f9c-bf692d03091a",
+        "evidence_id": "b759e694-93e8-4bc7-9a0a-871ab67707da",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "sequence": 2,
+        "event_type": "INTEGRITY_VERIFIED",
+        "actor_user_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:45:15.186577+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Original fingerprint compared with candidate file",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "5abd7f9679b36a42edc6c576f3149ed59e3ffa6c4d9aa81fb549e2370734afc9",
+        "event_hash": "48aa3d89f2374aedbd3041e14844c9c6232fa01d5578ee744fd8e11bc5046448",
+        "metadata_json": {
+          "result": "VERIFIED",
+          "calculated_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+          "elapsed_ms": 0.3071669489145279,
+          "candidate": "original.txt"
+        },
+        "actor": "Investigator A",
+        "evidence_label": "EVD-3e123a4b6f"
+      },
+      {
+        "id": "623fb132-2dc6-47de-8aac-b34b5b935300",
+        "evidence_id": "b759e694-93e8-4bc7-9a0a-871ab67707da",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "sequence": 1,
+        "event_type": "EVIDENCE_UPLOADED",
+        "actor_user_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:45:15.182995+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "description": "Evidence registered and encrypted",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "",
+        "event_hash": "5abd7f9679b36a42edc6c576f3149ed59e3ffa6c4d9aa81fb549e2370734afc9",
+        "metadata_json": {
+          "ip": "testclient",
+          "bytes": 287
+        },
+        "actor": "Investigator A",
+        "evidence_label": "EVD-3e123a4b6f"
+      },
+      {
+        "id": "a28eed14-1185-40ff-a84f-ede1770a444f",
+        "evidence_id": "f5f0abd8-0df5-446c-9d7d-31393607c2ce",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "sequence": 1,
+        "event_type": "EVIDENCE_UPLOADED",
+        "actor_user_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:45:15.097383+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "description": "Evidence registered and encrypted",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "",
+        "event_hash": "543e982305e21a4a5c55183dfcb6abbd80409f800c8a2757637d47f7d306e3fc",
+        "metadata_json": {
+          "ip": "testclient",
+          "bytes": 287
+        },
+        "actor": "Investigator A",
+        "evidence_label": "EVD-4573632b90"
+      },
+      {
+        "id": "39b1869b-6b41-477e-b9c0-e5e1e3b8fe2e",
+        "evidence_id": "37a0a159-5adb-488f-a2d9-881f234d3047",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "sequence": 2,
+        "event_type": "EVIDENCE_DOWNLOADED",
+        "actor_user_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:45:15.053343+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Authorized evidence retrieval prepared",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "7cd92d11fc5e154920f8d9fbc33784e0c19f6fd3d17711f8c8094ddc0e5b544a",
+        "event_hash": "3fbb6f4848cdd5bd1cdf6d13ac38317f5c12c60c03ba976e5d76155f4ff23340",
+        "metadata_json": {
+          "decryption_ms": 0.08700002217665315
+        },
+        "actor": "Investigator A",
+        "evidence_label": "EVD-fd1eafc520"
+      },
+      {
+        "id": "f2b7b049-976f-46e9-98e1-927ffbf56288",
+        "evidence_id": "37a0a159-5adb-488f-a2d9-881f234d3047",
+        "case_id": "2d6a102a-b6e5-4644-abda-f49abe20a9aa",
+        "sequence": 1,
+        "event_type": "EVIDENCE_UPLOADED",
+        "actor_user_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:45:15.046807+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": "e518f510-4705-4c5e-8f81-c8b24d65b2bd",
+        "description": "Evidence registered and encrypted",
+        "evidence_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+        "previous_event_hash": "",
+        "event_hash": "7cd92d11fc5e154920f8d9fbc33784e0c19f6fd3d17711f8c8094ddc0e5b544a",
+        "metadata_json": {
+          "ip": "testclient",
+          "bytes": 287
+        },
+        "actor": "Investigator A",
+        "evidence_label": "EVD-fd1eafc520"
+      }
+    ],
+    "blockchain": {
+      "provider": "development",
+      "connected": false,
+      "label": "Development Tamper-Evident Ledger"
+    }
+  }
+}

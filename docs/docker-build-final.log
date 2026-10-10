@@ -1,0 +1,297 @@
+ Image nyayavault-minio:source-7aac2a2 Building
+ Image nyayavault-backend Building
+ Image nyayavault-frontend Building
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.91kB done
+#1 DONE 0.0s
+
+#2 [minio internal] load build definition from Dockerfile
+#2 transferring dockerfile: 589B done
+#2 DONE 0.0s
+
+#3 [frontend internal] load build definition from Dockerfile
+#3 transferring dockerfile: 587B done
+#3 DONE 0.0s
+
+#4 [backend internal] load build definition from Dockerfile
+#4 transferring dockerfile: 376B done
+#4 DONE 0.0s
+
+#5 [backend internal] load metadata for docker.io/library/python:3.13-slim
+#5 ...
+
+#6 [auth] library/golang:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#7 [auth] library/debian:pull token for registry-1.docker.io
+#7 DONE 0.0s
+
+#8 [auth] library/python:pull token for registry-1.docker.io
+#8 DONE 0.0s
+
+#9 [auth] library/node:pull token for registry-1.docker.io
+#9 DONE 0.0s
+
+#10 [frontend internal] load metadata for docker.io/library/node:22-bookworm-slim
+#10 ...
+
+#11 [minio internal] load metadata for docker.io/library/golang:1.24.8-bookworm
+#11 DONE 2.4s
+
+#10 [frontend internal] load metadata for docker.io/library/node:22-bookworm-slim
+#10 DONE 2.4s
+
+#12 [frontend internal] load .dockerignore
+#12 transferring context: 101B done
+#12 DONE 0.0s
+
+#13 [frontend build 1/7] FROM docker.io/library/node:22-bookworm-slim@sha256:43ac6c60b8f89723f746e8a92ce91abd5017e627ce1ddfe4238355d3a30b772c
+#13 resolve docker.io/library/node:22-bookworm-slim@sha256:43ac6c60b8f89723f746e8a92ce91abd5017e627ce1ddfe4238355d3a30b772c done
+#13 DONE 0.0s
+
+#14 [frontend build 2/7] WORKDIR /app
+#14 CACHED
+
+#15 [frontend internal] load build context
+#15 transferring context: 2.06kB done
+#15 DONE 0.0s
+
+#16 [frontend build 3/7] COPY package*.json ./
+#16 DONE 0.0s
+
+#17 [frontend build 4/7] RUN npm install -g pnpm@10.18.3
+#17 ...
+
+#5 [backend internal] load metadata for docker.io/library/python:3.13-slim
+#5 DONE 2.6s
+
+#18 [backend internal] load .dockerignore
+#18 transferring context: 82B done
+#18 DONE 0.0s
+
+#19 [backend 1/6] FROM docker.io/library/python:3.13-slim@sha256:3dd7cc108ec1493442514f5c2a871af6af0ec31d768ff6e378a93340c3b3db5f
+#19 resolve docker.io/library/python:3.13-slim@sha256:3dd7cc108ec1493442514f5c2a871af6af0ec31d768ff6e378a93340c3b3db5f done
+#19 DONE 0.0s
+
+#20 [backend internal] load build context
+#20 transferring context: 2.59kB done
+#20 DONE 0.0s
+
+#21 [backend 3/6] COPY requirements.txt .
+#21 CACHED
+
+#22 [backend 4/6] RUN pip install --no-cache-dir -r requirements.txt
+#22 CACHED
+
+#23 [backend 2/6] WORKDIR /app
+#23 CACHED
+
+#24 [backend 5/6] COPY . .
+#24 CACHED
+
+#25 [backend 6/6] RUN useradd --create-home vault && mkdir -p /app/data && chown -R vault:vault /app
+#25 CACHED
+
+#26 [backend] exporting to image
+#26 exporting layers done
+#26 exporting manifest sha256:40932dd0146340d84be42ffb3bdcb5b0ec85f5f78fd0f9bf2120c2ac14410ffd done
+#26 exporting config sha256:9e1d2acbf2dd872e59a5142d928da1c5a9e61ceff852d800b0e09f367662d7a3 done
+#26 exporting attestation manifest sha256:c4e345821c70d43b6b621f8a0090a4c15da0f0585708e4cf96ed0adea0920524 done
+#26 exporting manifest list sha256:214505d886e814220b0f95a88a3e3103ebd81bcf613d089431bfd78833e24320 done
+#26 naming to docker.io/library/nyayavault-backend:latest done
+#26 unpacking to docker.io/library/nyayavault-backend:latest done
+#26 DONE 0.0s
+
+#27 [minio internal] load metadata for docker.io/library/debian:bookworm-slim
+#27 DONE 2.7s
+
+#28 [backend] resolving provenance for metadata file
+#28 DONE 0.0s
+
+#29 [minio internal] load .dockerignore
+#29 transferring context: 2B done
+#29 DONE 0.0s
+
+#30 [minio stage-1 1/3] FROM docker.io/library/debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251
+#30 resolve docker.io/library/debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251 0.0s done
+#30 DONE 0.0s
+
+#31 [minio build 1/2] FROM docker.io/library/golang:1.24.8-bookworm@sha256:4ed690d6649d63c312b99a6120025ec79ce3b542968a37da53d6236c7c61a848
+#31 resolve docker.io/library/golang:1.24.8-bookworm@sha256:4ed690d6649d63c312b99a6120025ec79ce3b542968a37da53d6236c7c61a848 0.0s done
+#31 DONE 0.0s
+
+#32 [minio stage-1 2/3] RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/* && useradd --uid 10001 --create-home minio && mkdir /data && chown minio:minio /data
+#32 CACHED
+
+#33 [minio build 2/2] RUN CGO_ENABLED=0 GOBIN=/out go install github.com/minio/minio@7aac2a2c5b7c882e68c1ce017d8256be2feea27f
+#33 CACHED
+
+#34 [minio stage-1 3/3] COPY --from=build /out/minio /usr/local/bin/minio
+#34 CACHED
+
+#35 [minio] exporting to image
+#35 exporting layers done
+#35 exporting manifest sha256:8256e5ae39a005dc6ceb8de5e4e0b2e171c2f5ad9e63467f2a95777db40a85b6 done
+#35 exporting config sha256:3d2bedeb6ad1dc6f94b72407d93266752b43c66e1f0dce1e8d75f5efb998d544 done
+#35 exporting attestation manifest sha256:633313573f18686ee4de3f1b10504b9269b092f4eeedc8bee74c0bdf513fdc1c done
+#35 exporting manifest list sha256:fb83d3416bc7b0f0ff86efe63dd965ff815ea9439de5d14488108eacbcb174c5 done
+#35 naming to docker.io/library/nyayavault-minio:source-7aac2a2 done
+#35 unpacking to docker.io/library/nyayavault-minio:source-7aac2a2 done
+#35 DONE 0.0s
+
+#36 [minio] resolving provenance for metadata file
+#36 DONE 0.0s
+
+#17 [frontend build 4/7] RUN npm install -g pnpm@10.18.3
+#17 34.59
+#17 34.59 added 1 package in 34s
+#17 34.59
+#17 34.59 1 package is looking for funding
+#17 34.59   run `npm fund` for details
+#17 34.59 npm notice
+#17 34.59 npm notice New major version of npm available! 10.9.9 -> 12.2.0
+#17 34.59 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+#17 34.59 npm notice To update run: npm install -g npm@12.2.0
+#17 34.59 npm notice
+#17 DONE 34.7s
+
+#37 [frontend build 5/7] RUN pnpm import && pnpm install --frozen-lockfile
+#37 0.448 Progress: resolved 1, reused 0, downloaded 0, added 0
+#37 1.448 Progress: resolved 7, reused 0, downloaded 0, added 0
+#37 2.448 Progress: resolved 16, reused 0, downloaded 0, added 0
+#37 3.449 Progress: resolved 21, reused 0, downloaded 0, added 0
+#37 4.451 Progress: resolved 42, reused 0, downloaded 0, added 0
+#37 5.452 Progress: resolved 52, reused 0, downloaded 0, added 0
+#37 6.455 Progress: resolved 65, reused 0, downloaded 0, added 0
+#37 7.458 Progress: resolved 77, reused 0, downloaded 0, added 0
+#37 8.464 Progress: resolved 93, reused 0, downloaded 0, added 0
+#37 9.469 Progress: resolved 112, reused 0, downloaded 0, added 0
+#37 10.47 Progress: resolved 128, reused 0, downloaded 0, added 0
+#37 11.48 Progress: resolved 137, reused 0, downloaded 0, added 0
+#37 12.48 Progress: resolved 140, reused 0, downloaded 0, added 0
+#37 13.57 Progress: resolved 141, reused 0, downloaded 0, added 0
+#37 13.61 Progress: resolved 141, reused 0, downloaded 0, added 0, done
+#37 13.61
+#37 13.83 Lockfile is up to date, resolution step is skipped
+#37 13.84 Progress: resolved 1, reused 0, downloaded 0, added 0
+#37 13.85 Packages: +93
+#37 13.85 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#37 14.84 Progress: resolved 93, reused 0, downloaded 16, added 16
+#37 15.84 Progress: resolved 93, reused 0, downloaded 25, added 25
+#37 16.49  WARN  Tarball download average speed 46 KiB/s (size 52 KiB) is below 50 KiB/s: https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz (GET)
+#37 16.73
+#37 16.73    ╭─────────────────────────────────────────╮
+#37 16.73    │                                         │
+#37 16.73    │   Update available! 10.18.3 → 12.9.1.   │
+#37 16.73    │   Changelog: https://pnpm.io/v/12.9.1   │
+#37 16.73    │    To update, run: pnpm add -g pnpm     │
+#37 16.73    │                                         │
+#37 16.73    ╰─────────────────────────────────────────╯
+#37 16.73
+#37 16.84 Progress: resolved 93, reused 0, downloaded 57, added 57
+#37 17.85 Progress: resolved 93, reused 0, downloaded 67, added 67
+#37 18.85 Progress: resolved 93, reused 0, downloaded 72, added 72
+#37 19.85 Progress: resolved 93, reused 0, downloaded 83, added 83
+#37 20.86 Progress: resolved 93, reused 0, downloaded 86, added 86
+#37 21.86 Progress: resolved 93, reused 0, downloaded 87, added 86
+#37 22.86 Progress: resolved 93, reused 0, downloaded 87, added 87
+#37 24.11 Progress: resolved 93, reused 0, downloaded 88, added 87
+#37 25.11 Progress: resolved 93, reused 0, downloaded 88, added 88
+#37 26.11 Progress: resolved 93, reused 0, downloaded 89, added 89
+#37 27.11 Progress: resolved 93, reused 0, downloaded 90, added 90
+#37 34.06 Progress: resolved 93, reused 0, downloaded 91, added 90
+#37 35.06 Progress: resolved 93, reused 0, downloaded 91, added 91
+#37 37.45 Progress: resolved 93, reused 0, downloaded 92, added 91
+#37 38.45 Progress: resolved 93, reused 0, downloaded 92, added 92
+#37 106.8 Progress: resolved 93, reused 0, downloaded 93, added 92
+#37 106.8 Progress: resolved 93, reused 0, downloaded 93, added 93, done
+#37 106.8
+#37 106.8 dependencies:
+#37 106.8 + lucide-react 0.468.0
+#37 106.8 + next 15.5.27
+#37 106.8 + react 19.3.0
+#37 106.8 + react-dom 19.3.0
+#37 106.8 + recharts 3.10.1
+#37 106.8
+#37 106.8 devDependencies:
+#37 106.8 + @playwright/test 1.63.0
+#37 106.8 + @tailwindcss/postcss 4.3.3
+#37 106.8 + @types/node 22.20.5
+#37 106.8 + @types/react 19.3.0
+#37 106.8 + @types/react-dom 19.3.0
+#37 106.8 + tailwindcss 4.3.3
+#37 106.8 + typescript 5.9.3
+#37 106.8
+#37 106.9 Done in 1m 33.2s using pnpm v10.18.3
+#37 DONE 107.1s
+
+#38 [frontend build 6/7] COPY . .
+#38 DONE 0.1s
+
+#39 [frontend build 7/7] RUN DOCKER_BUILD=1 npm run build
+#39 0.162
+#39 0.162 > nyayavault-frontend@1.0.0 build
+#39 0.162 > next build
+#39 0.162
+#39 0.465 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+#39 0.465 This information is used to shape Next.js' roadmap and prioritize features.
+#39 0.465 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#39 0.465 https://nextjs.org/telemetry
+#39 0.465
+#39 0.513    ▲ Next.js 15.5.27
+#39 0.513
+#39 0.540    Creating an optimized production build ...
+#39 6.529  ✓ Compiled successfully in 4.7s
+#39 6.531    Linting and checking validity of types ...
+#39 8.273    Collecting page data ...
+#39 8.991    Generating static pages (0/3) ...
+#39 9.200  ✓ Generating static pages (3/3)
+#39 9.569    Finalizing page optimization ...
+#39 9.569    Collecting build traces ...
+#39 21.07
+#39 21.07 Route (app)                                 Size  First Load JS
+#39 21.07 ┌ ○ /_not-found                            992 B         103 kB
+#39 21.07 └ ƒ /[[...path]]                          113 kB         214 kB
+#39 21.07 + First Load JS shared by all             102 kB
+#39 21.07   ├ chunks/14835275-bb8cca6c18cc8829.js  54.2 kB
+#39 21.07   ├ chunks/654-5d5de694c668acc5.js       45.7 kB
+#39 21.07   └ other shared chunks (total)          1.93 kB
+#39 21.07
+#39 21.07
+#39 21.07 ○  (Static)   prerendered as static content
+#39 21.07 ƒ  (Dynamic)  server-rendered on demand
+#39 21.07
+#39 DONE 21.2s
+
+#40 [frontend stage-1 3/4] COPY --from=build --chown=node:node /app/.next/standalone ./
+#40 DONE 0.2s
+
+#41 [frontend stage-1 4/4] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+#41 DONE 0.0s
+
+#42 [frontend] exporting to image
+#42 exporting layers
+#42 exporting layers 1.7s done
+#42 exporting manifest sha256:e63195d8bdf72519c3d0817a770eadff2ce28b377151c40361c45c023ad2cc56 done
+#42 exporting config sha256:e63c3f470b7367e55b55a6e3285c6ff63b32a0c3b21424a41ba35789d911bd2d done
+#42 exporting attestation manifest sha256:c6d2dc7346ce379b519eae3db32d7fe5689a39ad956df3be20a4e9ff632bb72d done
+#42 exporting manifest list sha256:4a94fce1c7ba67d2880a5f8b44f596d69336226e5e53f8119685b1a320cf0c8d done
+#42 naming to docker.io/library/nyayavault-frontend:latest done
+#42 unpacking to docker.io/library/nyayavault-frontend:latest
+#42 unpacking to docker.io/library/nyayavault-frontend:latest 1.0s done
+#42 DONE 2.7s
+
+#43 [frontend] resolving provenance for metadata file
+#43 DONE 0.0s
+ Image nyayavault-minio:source-7aac2a2 Built
+ Image nyayavault-backend Built
+ Image nyayavault-frontend Built
+ Container nyayavault-postgres-1 Running
+ Container nyayavault-minio-1 Running
+ Container nyayavault-backend-1 Running
+ Container nyayavault-frontend-1 Creating
+ Container nyayavault-frontend-1 Created
+ Container nyayavault-postgres-1 Waiting
+ Container nyayavault-postgres-1 Healthy
+ Container nyayavault-frontend-1 Starting
+ Container nyayavault-frontend-1 Started

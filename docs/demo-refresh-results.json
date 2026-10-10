@@ -1,0 +1,2832 @@
+{
+  "status": "passed",
+  "fictional": true,
+  "api": "http://127.0.0.1:8001/api",
+  "completed_at": "2026-10-08T14:47:37.927578+00:00",
+  "elapsed_seconds": 65.701,
+  "private_baseline": "blockchain/runtime/demo-refresh-backups/20261008T144632Z-a162e1c6/baseline.json",
+  "archive_method": "Case status ARCHIVED; original objects, metadata, memberships, custody events and transaction IDs retained",
+  "archived_case_numbers": [
+    "CASE-ROLE-cf3eb29b",
+    "CASE-DOCKER-d94ee9f1",
+    "CASE-DOCKER-17febfd1",
+    "CASE-DOCKER-360662a4",
+    "CASE-2026-001"
+  ],
+  "cases": [
+    {
+      "id": "7a97199c-e1e6-488e-8b92-fa1bebb1abb7",
+      "case_number": "NV-2026-0142",
+      "title": "Supplier invoice diversion \u2014 Aster Office Supplies",
+      "description": "Fictional demo: an accounts clerk reports a \u20b94,80,000 supplier payment redirected after an altered invoice arrived by email. Compare the message headers, payment authorization and workstation findings; the allegation remains under investigation.",
+      "department": "Cybercrime Division",
+      "priority": "HIGH",
+      "status": "UNDER_INVESTIGATION"
+    },
+    {
+      "id": "67f94609-877f-48ac-982d-4d67937547b1",
+      "case_number": "NV-2026-0217",
+      "title": "Night-time collision \u2014 Riverside Junction",
+      "description": "Fictional demo: a delivery rider reports a night-time collision at Riverside Junction. Correlate camera timing, a witness account and scene notes. A later camera transcript differs from the preserved original, providing an integrity-alert scenario.",
+      "department": "Traffic Investigation Unit",
+      "priority": "CRITICAL",
+      "status": "UNDER_INVESTIGATION"
+    },
+    {
+      "id": "d2586033-f643-4c26-a378-175d60b86c33",
+      "case_number": "NV-2026-0308",
+      "title": "Missing stock \u2014 Meridian Logistics warehouse",
+      "description": "Fictional demo: twenty-four handheld scanners were reported missing after a loading-bay shift. Review access logs, the stock discrepancy and a final examination note. The case is closed for demonstration after an inventory reconciliation, with evidence retained.",
+      "department": "Property Crime Unit",
+      "priority": "MEDIUM",
+      "status": "CLOSED"
+    },
+    {
+      "id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+      "case_number": "NV-2026-0419",
+      "title": "Ransomware incident \u2014 Community Skills Centre",
+      "description": "Fictional demo: a training centre reports unavailable shared files and an extortion message on one workstation. Preserve the incident log, endpoint timeline and triage note while examining the entry point and recovery options. No malware is included.",
+      "department": "Cybercrime & Digital Forensics",
+      "priority": "HIGH",
+      "status": "OPEN"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "500b90a5-0a5c-4b47-bcc5-1f11a8c37c5a",
+      "evidence_id": "NV-0142-EMAIL",
+      "case_number": "NV-2026-0142",
+      "sha256_hash": "fab3b4002881e0aebbc3fcbf23c99d9fecaab67b412597833eb7edfd6c1ef71f",
+      "integrity_status": "VERIFIED",
+      "custody_events": 3,
+      "transactions": [
+        {
+          "event_id": "039b642e-5f5a-402c-95cf-b9d455638c2c",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:46:32.760933+00:00",
+          "tx_id": "0f17e5e95c716d0ef614b524918a79b66c1a249bb5680f7657c0a6cf9077758a"
+        },
+        {
+          "event_id": "14d28944-41eb-4219-9e39-122febda71e7",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:46:34.861543+00:00",
+          "tx_id": "abd3c2093f6336fbb178cbb262565387d5311c439c28595bf62456a1cdf5888c"
+        },
+        {
+          "event_id": "4ba86cd3-4b87-4c9c-a48b-6a55577be8cd",
+          "event_type": "CUSTODY_TRANSFERRED",
+          "timestamp": "2026-10-08T14:46:36.914695+00:00",
+          "tx_id": "f60d6b8872682fb7ced09e4347989e86ac0714bb4ef5699915581b8eadec700a"
+        }
+      ]
+    },
+    {
+      "id": "b9d5a99a-51da-4c7d-a0e3-36b2ef7a0e7c",
+      "evidence_id": "NV-0142-PAYMENT",
+      "case_number": "NV-2026-0142",
+      "sha256_hash": "0ac9af034ae4cb27fbbf327c67709f65da64cba142c17c0e75b55d937aeeecd1",
+      "integrity_status": "VERIFIED",
+      "custody_events": 2,
+      "transactions": [
+        {
+          "event_id": "7e44d48e-b29a-429f-b38e-1b26f2c6227c",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:46:39.023027+00:00",
+          "tx_id": "b10ac5602e088b79a4646b5fd6a88688af657e1fee31f1600d7327c6faabf2b3"
+        },
+        {
+          "event_id": "233248f4-77e8-4784-add4-28946355e31e",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:46:41.086221+00:00",
+          "tx_id": "7ffd38f9905bab457e09a4d1b4b9fa46031b6cc2e19606ba2b2e75c4c3f3218e"
+        }
+      ]
+    },
+    {
+      "id": "8ad69ad2-f743-4360-8ee7-3e92897235b1",
+      "evidence_id": "NV-0142-FORENSIC",
+      "case_number": "NV-2026-0142",
+      "sha256_hash": "4b8ab16a568c537d3ec8ca7a49b0e1618c170006e1e28739eaf65f1f4e68f513",
+      "integrity_status": "VERIFIED",
+      "custody_events": 3,
+      "transactions": [
+        {
+          "event_id": "d356e442-01ee-40e9-b274-c52e19d56351",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:46:43.204243+00:00",
+          "tx_id": "cb37c5fdd45fd5c3df419faf0aa3363cced6ad27c7da1a2b1c44a58594595b79"
+        },
+        {
+          "event_id": "e6206309-c81a-4255-ba21-d3b4e5ca5c5e",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:46:45.267294+00:00",
+          "tx_id": "caa2f18ce6991944ce1290ad7adc512c34f9aeb2391f8c21149be6cfb7e23d23"
+        },
+        {
+          "event_id": "8018a691-73b0-4c91-91f8-187b503f3e74",
+          "event_type": "CUSTODY_TRANSFERRED",
+          "timestamp": "2026-10-08T14:46:47.327405+00:00",
+          "tx_id": "985e2115aad5a986b15c711f63a8de2c0266b035d0fb83fb34da2f5fee8b4d72"
+        }
+      ]
+    },
+    {
+      "id": "d99c0b31-0960-4d5f-8a39-9cdcffc348bd",
+      "evidence_id": "NV-0217-CAMERA",
+      "case_number": "NV-2026-0217",
+      "sha256_hash": "03ab40f213dbc0ec7ae198969a911daef7b6ce8bd8a39a0a54bfffdb39ddfbee",
+      "integrity_status": "INTEGRITY_ALERT",
+      "custody_events": 4,
+      "transactions": [
+        {
+          "event_id": "73cd8bd5-e035-4eaf-b6d0-d4bdd33e7a6f",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:46:49.454571+00:00",
+          "tx_id": "6e1d4350e4861e29227f407ea0df18973c9e4ed528fb0d360f3a1d0fc7bf1008"
+        },
+        {
+          "event_id": "4c8a47fd-89a0-46f7-960e-3c14e94ae5c7",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:46:51.511099+00:00",
+          "tx_id": "e69e21f18c950b1bc793f2ff50acebed07d24054ab3d518b627d91b64ab94dbf"
+        },
+        {
+          "event_id": "23ee300f-4005-4bcf-9a46-282ad4de045a",
+          "event_type": "CUSTODY_TRANSFERRED",
+          "timestamp": "2026-10-08T14:46:53.579070+00:00",
+          "tx_id": "58de4b2fbe6f280f7dccb4458c946526e18279f675ac00abe0b9cc720a2da759"
+        },
+        {
+          "event_id": "5436ab02-eb6d-4357-98aa-d0a31d2ae28c",
+          "event_type": "INTEGRITY_FAILED",
+          "timestamp": "2026-10-08T14:46:55.648371+00:00",
+          "tx_id": "ada824368a375b5487646dab6db57fb5bee93583188410c10785bc168f84bb24"
+        }
+      ]
+    },
+    {
+      "id": "83f12a10-122d-429f-809a-ca8487ed62a2",
+      "evidence_id": "NV-0217-WITNESS",
+      "case_number": "NV-2026-0217",
+      "sha256_hash": "1fc6d2beaaf32101c6cf59c9f3ec71f70365e196dfb84a39000ff95119acc63b",
+      "integrity_status": "UNVERIFIED",
+      "custody_events": 1,
+      "transactions": [
+        {
+          "event_id": "7758f568-9f80-4b32-93a9-60ac37c001c2",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:46:57.762720+00:00",
+          "tx_id": "88378501992e30ea7b20fb523fa7d7e221b6040e12e9f632913057f0d7e80be6"
+        }
+      ]
+    },
+    {
+      "id": "2335a067-5aea-4cd2-a1f4-5e736d494f51",
+      "evidence_id": "NV-0217-SCENE",
+      "case_number": "NV-2026-0217",
+      "sha256_hash": "9948f6f092eb9a9c30bc4a40ab19434803af6709f266dad3fff57f51e177073b",
+      "integrity_status": "VERIFIED",
+      "custody_events": 2,
+      "transactions": [
+        {
+          "event_id": "20099135-c65f-476c-8c89-9b9a7231d719",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:46:59.873225+00:00",
+          "tx_id": "38cea19eef0a509cf2b53cdb7e6a12dbcfa44236ec5e5607fdc18aea292c490b"
+        },
+        {
+          "event_id": "551a1110-54e8-4e97-82c5-f557458b2c7b",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:47:01.934258+00:00",
+          "tx_id": "c84389069461e503bf3fc583cca0af1107529d618ad5f93fe77c1a584576efe4"
+        }
+      ]
+    },
+    {
+      "id": "c523bcd0-afa8-4ccb-8a67-3ae7f0a249af",
+      "evidence_id": "NV-0308-ACCESS",
+      "case_number": "NV-2026-0308",
+      "sha256_hash": "808a5fde537e7cb2861dc13e1a536685efa7d635ce0694d473f8ded7881bc56d",
+      "integrity_status": "VERIFIED",
+      "custody_events": 3,
+      "transactions": [
+        {
+          "event_id": "24d2e3c3-7173-42de-849a-a2e37904c5eb",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:47:04.065652+00:00",
+          "tx_id": "9864e401d5fd70514e998efac1075f5b475d84815725d4128d5b9b68171b3aba"
+        },
+        {
+          "event_id": "327396d6-c66f-45e3-acfa-bdb078633c16",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:47:06.125814+00:00",
+          "tx_id": "afc68a0bf17d8e7f39e3754db0e5cc432c9e5bb785c23fe02a648d308f48acd9"
+        },
+        {
+          "event_id": "7cf2cb6c-7f31-4e5d-b725-02ce57bc0bc5",
+          "event_type": "CUSTODY_TRANSFERRED",
+          "timestamp": "2026-10-08T14:47:08.187470+00:00",
+          "tx_id": "20eb518790a58ecc605f62ee1b47ce61c2b77d857518db188fb8a522d60afd86"
+        }
+      ]
+    },
+    {
+      "id": "01aeffbe-6460-4e8c-b8e1-8564ff048352",
+      "evidence_id": "NV-0308-STOCK",
+      "case_number": "NV-2026-0308",
+      "sha256_hash": "458d67ebe2956a900f9ef08f560c9cebf2211bc00e13b0966e116b13f7a60b93",
+      "integrity_status": "VERIFIED",
+      "custody_events": 2,
+      "transactions": [
+        {
+          "event_id": "b7917450-c69c-44ba-8fa6-5c94fe397fd1",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:47:10.312860+00:00",
+          "tx_id": "2156d259af04977ef46b59e345e5ae4983fa356869b7ffe59d26b80d33c479c9"
+        },
+        {
+          "event_id": "9ac31151-393b-4e4e-9e71-cd086bf87e8e",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:47:12.371666+00:00",
+          "tx_id": "b2c6d4df095c13a557782a6b1b58c401edf369cc58b056f465700359991821da"
+        }
+      ]
+    },
+    {
+      "id": "ed3ea3a3-27e7-4c83-ace1-08e1821739d7",
+      "evidence_id": "NV-0308-REVIEW",
+      "case_number": "NV-2026-0308",
+      "sha256_hash": "cf7e86265ebd878fad13be05b8be38a8b351679d09ec38439355b21f55642d52",
+      "integrity_status": "VERIFIED",
+      "custody_events": 3,
+      "transactions": [
+        {
+          "event_id": "d227b69c-5703-4e62-a234-ef63c40dcd94",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:47:14.495056+00:00",
+          "tx_id": "6ab8b56f06ecb7ea9112a05b3445bdf92d8f66a935e09332024a706912402e58"
+        },
+        {
+          "event_id": "18104141-e0e6-4dd6-9c62-b559ac71d0a7",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:47:16.554795+00:00",
+          "tx_id": "7bb5da5fc300e4f051f28d2e9d07dba32afa871b6744319044f84f14667d0d00"
+        },
+        {
+          "event_id": "53014ac9-be30-4bd4-842b-8fb1f32a6145",
+          "event_type": "CUSTODY_TRANSFERRED",
+          "timestamp": "2026-10-08T14:47:18.617651+00:00",
+          "tx_id": "78b566d02be634f7806998426e863a152754a4ae0ce27d968e1bbe265d5cd92d"
+        }
+      ]
+    },
+    {
+      "id": "cc0e221f-1bea-4da7-b849-724cc6e298b8",
+      "evidence_id": "NV-0419-INCIDENT",
+      "case_number": "NV-2026-0419",
+      "sha256_hash": "a400f806176d2f7ce8efb2e34a5d97c85d835fdce479a6dce996a0740ab33f41",
+      "integrity_status": "VERIFIED",
+      "custody_events": 2,
+      "transactions": [
+        {
+          "event_id": "3d231604-85fa-4ee6-8a61-8f66c1ab1404",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:47:20.787104+00:00",
+          "tx_id": "7969d598a250818468b1af52bbb97db6535d609952d87a97cf1bb0ad77b9a9aa"
+        },
+        {
+          "event_id": "e4ea34ef-c94b-4334-a10d-bd1083d55689",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:47:22.846438+00:00",
+          "tx_id": "649e251d027750abc3cc5ea558b61a5c4e8eb18568aebdfbd07c6b59e9e7928d"
+        }
+      ]
+    },
+    {
+      "id": "14bc4aa1-7bd5-41ba-9470-3056e0baf3c1",
+      "evidence_id": "NV-0419-ENDPOINT",
+      "case_number": "NV-2026-0419",
+      "sha256_hash": "3b4128d6d908cace251a9e404a4a5c2a65aa26d074d3ae86aab57af78c0e4df9",
+      "integrity_status": "VERIFIED",
+      "custody_events": 3,
+      "transactions": [
+        {
+          "event_id": "10092c17-bf57-4bd8-9b9d-8054862fb285",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:47:24.976351+00:00",
+          "tx_id": "1efdd6c04e33182dbb3458d2265cde4bbb44bbaf613f5f923f4fbceb80273446"
+        },
+        {
+          "event_id": "49e9e35e-2ab6-4f98-ae1c-d6f40e76be57",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:47:27.028767+00:00",
+          "tx_id": "c6bd0cb88fcb9393b43ea0362fedf1bd9fc4969cbfc0d698007529c5a22dd9cb"
+        },
+        {
+          "event_id": "b759bd1b-aeb8-46de-b617-b6761a81359a",
+          "event_type": "CUSTODY_TRANSFERRED",
+          "timestamp": "2026-10-08T14:47:29.094457+00:00",
+          "tx_id": "b446c8d032792164a7e6c904eb3a1cacc87c9c691034918a19415091d2296a66"
+        }
+      ]
+    },
+    {
+      "id": "993dbab4-cf31-4c4d-b52b-3ad246c7823b",
+      "evidence_id": "NV-0419-TRIAGE",
+      "case_number": "NV-2026-0419",
+      "sha256_hash": "af0df5aacd60d4095bfc14ccf2fb5c130d77ca95a7cdd3efe1c66828636b8908",
+      "integrity_status": "VERIFIED",
+      "custody_events": 3,
+      "transactions": [
+        {
+          "event_id": "82276ca0-c73c-400c-8c7f-a1ef4b037d50",
+          "event_type": "EVIDENCE_UPLOADED",
+          "timestamp": "2026-10-08T14:47:31.228115+00:00",
+          "tx_id": "2f79cca6d923cc0cee44a08a9e0ad244eb028e08ae5c452fbdbf3045ac91c8a0"
+        },
+        {
+          "event_id": "ab637779-1805-45e9-ac45-f97bec7323d5",
+          "event_type": "INTEGRITY_VERIFIED",
+          "timestamp": "2026-10-08T14:47:33.290191+00:00",
+          "tx_id": "d2f9b2cbd8ad34b2c6d957d13ccfe7d0cd20cdc5c4a3b2061e89e71947dac2b9"
+        },
+        {
+          "event_id": "ea9213f1-ef9a-4e39-844b-5513a75c023c",
+          "event_type": "CUSTODY_TRANSFERRED",
+          "timestamp": "2026-10-08T14:47:35.369312+00:00",
+          "tx_id": "839ab5d0c8d655af9a877a6348e6862bea07654c9bf9b934c5bd578f44d1240c"
+        }
+      ]
+    }
+  ],
+  "actual_counts": {
+    "active_cases": 4,
+    "active_evidence": 12,
+    "all_cases_including_archived": 9,
+    "all_evidence_including_archived": 17,
+    "verified": 10,
+    "integrity_alerts": 1,
+    "unverified": 1,
+    "custody_events": 31,
+    "committed_transactions": 31,
+    "forensic_transfers": 7,
+    "verification_attempts": 12,
+    "successful_verifications": 11,
+    "modified_candidates_detected": 1
+  },
+  "dashboard": {
+    "total_cases": 4,
+    "total_evidence": 12,
+    "verified": 10,
+    "alerts": 1,
+    "transfers": 7,
+    "verification_attempts": 12,
+    "successful_verifications": 11,
+    "detected_mismatches": 1,
+    "blockchain_transactions": 31,
+    "failed_blockchain_transactions": 0,
+    "metrics": {
+      "average_hash_ms": 0.004,
+      "average_encryption_ms": 0.079,
+      "average_upload_ms": 2053.639,
+      "average_database_ms": 3.606,
+      "average_verification_ms": 4.925,
+      "average_decryption_ms": null,
+      "average_blockchain_ms": 2039.097
+    },
+    "evidence_types": {
+      "Forensic Report": 4,
+      "Digital Log": 5,
+      "Court Document": 3
+    },
+    "recent_evidence": [
+      {
+        "id": "993dbab4-cf31-4c4d-b52b-3ad246c7823b",
+        "evidence_id": "NV-0419-TRIAGE",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "original_filename": "ransomware_triage_note.txt",
+        "mime_type": "text/plain",
+        "file_size": 862,
+        "evidence_type": "Forensic Report",
+        "description": "Fictional demo. Preliminary preservation and recovery assessment",
+        "source": "Forensic laboratory exercise worksheet",
+        "collection_location": "Digital Forensics Lab \u2014 isolated bench",
+        "collected_at": "2026-10-06T16:00:00+05:30",
+        "sha256_hash": "af0df5aacd60d4095bfc14ccf2fb5c130d77ca95a7cdd3efe1c66828636b8908",
+        "encryption_metadata": {
+          "algorithm": "AES-256-GCM",
+          "nonce": "first 12 bytes",
+          "aad": "evidence UUID",
+          "key_version": "1"
+        },
+        "uploaded_by": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "current_custodian_id": "f4622fd3-ebb1-45b8-af01-f82366358270",
+        "status": "TRANSFERRED",
+        "integrity_status": "VERIFIED",
+        "created_at": "2026-10-08T14:47:31.226993+00:00",
+        "timings": {
+          "hash_ms": 0.0036659999977928237,
+          "encryption_ms": 0.022207999961665337,
+          "database_ms": 3.324334000012641,
+          "upload_ms": 2043.428333999998
+        },
+        "case_number": "NV-2026-0419",
+        "case_title": "Ransomware incident \u2014 Community Skills Centre",
+        "custodian": "Forensic Officer",
+        "uploader": "Investigator B",
+        "tags": [
+          "fictional-demo",
+          "training"
+        ],
+        "blockchain_transactions": [
+          {
+            "id": "8fedb9da-1115-462e-93c5-b2333911e2ef",
+            "event_id": "82276ca0-c73c-400c-8c7f-a1ef4b037d50",
+            "status": "COMMITTED",
+            "tx_id": "2f79cca6d923cc0cee44a08a9e0ad244eb028e08ae5c452fbdbf3045ac91c8a0",
+            "error": null,
+            "elapsed_ms": 2033.975709999993
+          },
+          {
+            "id": "c851fcb1-350b-425b-b8ff-b5056a57d57a",
+            "event_id": "ab637779-1805-45e9-ac45-f97bec7323d5",
+            "status": "COMMITTED",
+            "tx_id": "d2f9b2cbd8ad34b2c6d957d13ccfe7d0cd20cdc5c4a3b2061e89e71947dac2b9",
+            "error": null,
+            "elapsed_ms": 2048.040958999991
+          },
+          {
+            "id": "c164d9ba-5b11-4a38-8328-5d2d4079297a",
+            "event_id": "ea9213f1-ef9a-4e39-844b-5513a75c023c",
+            "status": "COMMITTED",
+            "tx_id": "839ab5d0c8d655af9a877a6348e6862bea07654c9bf9b934c5bd578f44d1240c",
+            "error": null,
+            "elapsed_ms": 2038.0247090000125
+          }
+        ]
+      },
+      {
+        "id": "14bc4aa1-7bd5-41ba-9470-3056e0baf3c1",
+        "evidence_id": "NV-0419-ENDPOINT",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "original_filename": "endpoint_timeline.txt",
+        "mime_type": "text/plain",
+        "file_size": 880,
+        "evidence_type": "Digital Log",
+        "description": "Fictional demo. Simulated endpoint process and file activity timeline",
+        "source": "Fictional endpoint-monitor export",
+        "collection_location": "Community Skills Centre \u2014 workstation LAB-04",
+        "collected_at": "2026-10-06T10:00:00+05:30",
+        "sha256_hash": "3b4128d6d908cace251a9e404a4a5c2a65aa26d074d3ae86aab57af78c0e4df9",
+        "encryption_metadata": {
+          "algorithm": "AES-256-GCM",
+          "nonce": "first 12 bytes",
+          "aad": "evidence UUID",
+          "key_version": "1"
+        },
+        "uploaded_by": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "current_custodian_id": "f4622fd3-ebb1-45b8-af01-f82366358270",
+        "status": "TRANSFERRED",
+        "integrity_status": "VERIFIED",
+        "created_at": "2026-10-08T14:47:24.975165+00:00",
+        "timings": {
+          "hash_ms": 0.006167000037748949,
+          "encryption_ms": 0.022791999981564004,
+          "database_ms": 3.5696659999757685,
+          "upload_ms": 2039.587584000003
+        },
+        "case_number": "NV-2026-0419",
+        "case_title": "Ransomware incident \u2014 Community Skills Centre",
+        "custodian": "Forensic Officer",
+        "uploader": "Investigator B",
+        "tags": [
+          "fictional-demo",
+          "training"
+        ],
+        "blockchain_transactions": [
+          {
+            "id": "65bcd54d-9a87-419a-9fb0-86bcc77395e5",
+            "event_id": "10092c17-bf57-4bd8-9b9d-8054862fb285",
+            "status": "COMMITTED",
+            "tx_id": "1efdd6c04e33182dbb3458d2265cde4bbb44bbaf613f5f923f4fbceb80273446",
+            "error": null,
+            "elapsed_ms": 2029.0741260000118
+          },
+          {
+            "id": "034c7e08-f575-449e-bc90-cbb18566fa14",
+            "event_id": "49e9e35e-2ab6-4f98-ae1c-d6f40e76be57",
+            "status": "COMMITTED",
+            "tx_id": "c6bd0cb88fcb9393b43ea0362fedf1bd9fc4969cbfc0d698007529c5a22dd9cb",
+            "error": null,
+            "elapsed_ms": 2041.727917000003
+          },
+          {
+            "id": "24192c6b-d758-4677-8cfa-892de5f850ec",
+            "event_id": "b759bd1b-aeb8-46de-b617-b6761a81359a",
+            "status": "COMMITTED",
+            "tx_id": "b446c8d032792164a7e6c904eb3a1cacc87c9c691034918a19415091d2296a66",
+            "error": null,
+            "elapsed_ms": 2040.778333999981
+          }
+        ]
+      },
+      {
+        "id": "cc0e221f-1bea-4da7-b849-724cc6e298b8",
+        "evidence_id": "NV-0419-INCIDENT",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "original_filename": "incident_response_log.txt",
+        "mime_type": "text/plain",
+        "file_size": 809,
+        "evidence_type": "Digital Log",
+        "description": "Fictional demo. Initial incident and containment timeline",
+        "source": "Fictional service-desk exercise",
+        "collection_location": "Community Skills Centre \u2014 IT desk",
+        "collected_at": "2026-10-06T09:15:00+05:30",
+        "sha256_hash": "a400f806176d2f7ce8efb2e34a5d97c85d835fdce479a6dce996a0740ab33f41",
+        "encryption_metadata": {
+          "algorithm": "AES-256-GCM",
+          "nonce": "first 12 bytes",
+          "aad": "evidence UUID",
+          "key_version": "1"
+        },
+        "uploaded_by": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "current_custodian_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "status": "REGISTERED",
+        "integrity_status": "VERIFIED",
+        "created_at": "2026-10-08T14:47:20.786038+00:00",
+        "timings": {
+          "hash_ms": 0.005208000004586211,
+          "encryption_ms": 0.022415999978875334,
+          "database_ms": 2.884209000001192,
+          "upload_ms": 2041.2925840000185
+        },
+        "case_number": "NV-2026-0419",
+        "case_title": "Ransomware incident \u2014 Community Skills Centre",
+        "custodian": "Investigator B",
+        "uploader": "Investigator B",
+        "tags": [
+          "fictional-demo",
+          "training"
+        ],
+        "blockchain_transactions": [
+          {
+            "id": "9546faeb-280a-4f4b-b256-b74fc3eba0e7",
+            "event_id": "3d231604-85fa-4ee6-8a61-8f66c1ab1404",
+            "status": "COMMITTED",
+            "tx_id": "7969d598a250818468b1af52bbb97db6535d609952d87a97cf1bb0ad77b9a9aa",
+            "error": null,
+            "elapsed_ms": 2032.1221670000114
+          },
+          {
+            "id": "6c585374-adb4-4dd6-90e3-365daa9d1e0e",
+            "event_id": "e4ea34ef-c94b-4334-a10d-bd1083d55689",
+            "status": "COMMITTED",
+            "tx_id": "649e251d027750abc3cc5ea558b61a5c4e8eb18568aebdfbd07c6b59e9e7928d",
+            "error": null,
+            "elapsed_ms": 2038.9230840000323
+          }
+        ]
+      },
+      {
+        "id": "ed3ea3a3-27e7-4c83-ace1-08e1821739d7",
+        "evidence_id": "NV-0308-REVIEW",
+        "case_id": "d2586033-f643-4c26-a378-175d60b86c33",
+        "original_filename": "warehouse_examination_note.txt",
+        "mime_type": "text/plain",
+        "file_size": 741,
+        "evidence_type": "Forensic Report",
+        "description": "Fictional demo. Final review of inventory and access timeline",
+        "source": "Forensic laboratory training note",
+        "collection_location": "Digital Forensics Lab \u2014 bench 1",
+        "collected_at": "2026-10-04T15:00:00+05:30",
+        "sha256_hash": "cf7e86265ebd878fad13be05b8be38a8b351679d09ec38439355b21f55642d52",
+        "encryption_metadata": {
+          "algorithm": "AES-256-GCM",
+          "nonce": "first 12 bytes",
+          "aad": "evidence UUID",
+          "key_version": "1"
+        },
+        "uploaded_by": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "current_custodian_id": "f4622fd3-ebb1-45b8-af01-f82366358270",
+        "status": "TRANSFERRED",
+        "integrity_status": "VERIFIED",
+        "created_at": "2026-10-08T14:47:14.493973+00:00",
+        "timings": {
+          "hash_ms": 0.0037080000083733466,
+          "encryption_ms": 0.021833000005244685,
+          "database_ms": 3.1719579999958114,
+          "upload_ms": 2043.660626000019
+        },
+        "case_number": "NV-2026-0308",
+        "case_title": "Missing stock \u2014 Meridian Logistics warehouse",
+        "custodian": "Forensic Officer",
+        "uploader": "Investigator A",
+        "tags": [
+          "fictional-demo",
+          "training"
+        ],
+        "blockchain_transactions": [
+          {
+            "id": "beed4385-fa2b-4907-a297-d219f4422891",
+            "event_id": "d227b69c-5703-4e62-a234-ef63c40dcd94",
+            "status": "COMMITTED",
+            "tx_id": "6ab8b56f06ecb7ea9112a05b3445bdf92d8f66a935e09332024a706912402e58",
+            "error": null,
+            "elapsed_ms": 2033.5841680000044
+          },
+          {
+            "id": "859c1618-db63-4bfe-a3c9-60de699a6cb9",
+            "event_id": "18104141-e0e6-4dd6-9c62-b559ac71d0a7",
+            "status": "COMMITTED",
+            "tx_id": "7bb5da5fc300e4f051f28d2e9d07dba32afa871b6744319044f84f14667d0d00",
+            "error": null,
+            "elapsed_ms": 2037.2502510000459
+          },
+          {
+            "id": "55845731-2e83-4335-93c0-4ae8c88b4d5a",
+            "event_id": "53014ac9-be30-4bd4-842b-8fb1f32a6145",
+            "status": "COMMITTED",
+            "tx_id": "78b566d02be634f7806998426e863a152754a4ae0ce27d968e1bbe265d5cd92d",
+            "error": null,
+            "elapsed_ms": 2040.3233760000035
+          }
+        ]
+      },
+      {
+        "id": "01aeffbe-6460-4e8c-b8e1-8564ff048352",
+        "evidence_id": "NV-0308-STOCK",
+        "case_id": "d2586033-f643-4c26-a378-175d60b86c33",
+        "original_filename": "stock_reconciliation.txt",
+        "mime_type": "text/plain",
+        "file_size": 793,
+        "evidence_type": "Court Document",
+        "description": "Fictional demo. Stock count and later location reconciliation",
+        "source": "Fictional warehouse inventory record",
+        "collection_location": "Meridian warehouse \u2014 inventory desk",
+        "collected_at": "2026-10-03T10:30:00+05:30",
+        "sha256_hash": "458d67ebe2956a900f9ef08f560c9cebf2211bc00e13b0966e116b13f7a60b93",
+        "encryption_metadata": {
+          "algorithm": "AES-256-GCM",
+          "nonce": "first 12 bytes",
+          "aad": "evidence UUID",
+          "key_version": "1"
+        },
+        "uploaded_by": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "current_custodian_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "status": "REGISTERED",
+        "integrity_status": "VERIFIED",
+        "created_at": "2026-10-08T14:47:10.311879+00:00",
+        "timings": {
+          "hash_ms": 0.004708999995273189,
+          "encryption_ms": 0.023499999997511622,
+          "database_ms": 2.7914579999901434,
+          "upload_ms": 2040.814667999996
+        },
+        "case_number": "NV-2026-0308",
+        "case_title": "Missing stock \u2014 Meridian Logistics warehouse",
+        "custodian": "Investigator A",
+        "uploader": "Investigator A",
+        "tags": [
+          "fictional-demo",
+          "training"
+        ],
+        "blockchain_transactions": [
+          {
+            "id": "1a36270d-ecb8-47f4-9cce-5ad8a15b4861",
+            "event_id": "b7917450-c69c-44ba-8fa6-5c94fe397fd1",
+            "status": "COMMITTED",
+            "tx_id": "2156d259af04977ef46b59e345e5ae4983fa356869b7ffe59d26b80d33c479c9",
+            "error": null,
+            "elapsed_ms": 2031.6538760000071
+          },
+          {
+            "id": "ed2748e6-f044-48a2-bab2-b9a8daeef5df",
+            "event_id": "9ac31151-393b-4e4e-9e71-cd086bf87e8e",
+            "status": "COMMITTED",
+            "tx_id": "b2c6d4df095c13a557782a6b1b58c401edf369cc58b056f465700359991821da",
+            "error": null,
+            "elapsed_ms": 2037.1375419999822
+          }
+        ]
+      }
+    ],
+    "recent_activity": [
+      {
+        "id": "ea9213f1-ef9a-4e39-844b-5513a75c023c",
+        "evidence_id": "993dbab4-cf31-4c4d-b52b-3ad246c7823b",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "sequence": 3,
+        "event_type": "CUSTODY_TRANSFERRED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:35.369312+00:00",
+        "from_custodian_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "to_custodian_id": "f4622fd3-ebb1-45b8-af01-f82366358270",
+        "description": "Fictional demonstration: sealed digital evidence handed to the forensic officer for examination.",
+        "evidence_hash": "af0df5aacd60d4095bfc14ccf2fb5c130d77ca95a7cdd3efe1c66828636b8908",
+        "previous_event_hash": "fffffcece3305b3224174442a7568095c8f639f1b67531d95119b45b899dd58f",
+        "event_hash": "79ff26f1cc457c98d58b1f0a055999843059857d0848710a335f86c017b07870",
+        "metadata_json": {},
+        "actor": "Investigator B",
+        "evidence_label": "NV-0419-TRIAGE"
+      },
+      {
+        "id": "ab637779-1805-45e9-ac45-f97bec7323d5",
+        "evidence_id": "993dbab4-cf31-4c4d-b52b-3ad246c7823b",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "sequence": 2,
+        "event_type": "INTEGRITY_VERIFIED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:33.290191+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Original fingerprint compared with decrypted stored evidence",
+        "evidence_hash": "af0df5aacd60d4095bfc14ccf2fb5c130d77ca95a7cdd3efe1c66828636b8908",
+        "previous_event_hash": "84992b09c0f023e1734a12f221ebaa97fb9a90dac34d825c0ae6d67656bef842",
+        "event_hash": "fffffcece3305b3224174442a7568095c8f639f1b67531d95119b45b899dd58f",
+        "metadata_json": {
+          "result": "VERIFIED",
+          "calculated_hash": "af0df5aacd60d4095bfc14ccf2fb5c130d77ca95a7cdd3efe1c66828636b8908",
+          "elapsed_ms": 5.806667000001653,
+          "candidate": "stored original"
+        },
+        "actor": "Investigator B",
+        "evidence_label": "NV-0419-TRIAGE"
+      },
+      {
+        "id": "82276ca0-c73c-400c-8c7f-a1ef4b037d50",
+        "evidence_id": "993dbab4-cf31-4c4d-b52b-3ad246c7823b",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "sequence": 1,
+        "event_type": "EVIDENCE_UPLOADED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:31.228115+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "description": "Evidence registered and encrypted",
+        "evidence_hash": "af0df5aacd60d4095bfc14ccf2fb5c130d77ca95a7cdd3efe1c66828636b8908",
+        "previous_event_hash": "",
+        "event_hash": "84992b09c0f023e1734a12f221ebaa97fb9a90dac34d825c0ae6d67656bef842",
+        "metadata_json": {
+          "ip": "172.18.0.1",
+          "bytes": 862
+        },
+        "actor": "Investigator B",
+        "evidence_label": "NV-0419-TRIAGE"
+      },
+      {
+        "id": "b759bd1b-aeb8-46de-b617-b6761a81359a",
+        "evidence_id": "14bc4aa1-7bd5-41ba-9470-3056e0baf3c1",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "sequence": 3,
+        "event_type": "CUSTODY_TRANSFERRED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:29.094457+00:00",
+        "from_custodian_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "to_custodian_id": "f4622fd3-ebb1-45b8-af01-f82366358270",
+        "description": "Fictional demonstration: sealed digital evidence handed to the forensic officer for examination.",
+        "evidence_hash": "3b4128d6d908cace251a9e404a4a5c2a65aa26d074d3ae86aab57af78c0e4df9",
+        "previous_event_hash": "e11ed35752dd34c39f5cc01de376ab93761cc51444db8a857dcf270a4f69ed7f",
+        "event_hash": "122b9801cff97d6b1fe760f4b4dc84adf458be62999b1e5314518556e3dcb7aa",
+        "metadata_json": {},
+        "actor": "Investigator B",
+        "evidence_label": "NV-0419-ENDPOINT"
+      },
+      {
+        "id": "49e9e35e-2ab6-4f98-ae1c-d6f40e76be57",
+        "evidence_id": "14bc4aa1-7bd5-41ba-9470-3056e0baf3c1",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "sequence": 2,
+        "event_type": "INTEGRITY_VERIFIED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:27.028767+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Original fingerprint compared with decrypted stored evidence",
+        "evidence_hash": "3b4128d6d908cace251a9e404a4a5c2a65aa26d074d3ae86aab57af78c0e4df9",
+        "previous_event_hash": "d7cd276f66143c4df09dcd4ccc77467e258e24dad070ef0cc62f151ed94465cb",
+        "event_hash": "e11ed35752dd34c39f5cc01de376ab93761cc51444db8a857dcf270a4f69ed7f",
+        "metadata_json": {
+          "result": "VERIFIED",
+          "calculated_hash": "3b4128d6d908cace251a9e404a4a5c2a65aa26d074d3ae86aab57af78c0e4df9",
+          "elapsed_ms": 4.992249999986598,
+          "candidate": "stored original"
+        },
+        "actor": "Investigator B",
+        "evidence_label": "NV-0419-ENDPOINT"
+      },
+      {
+        "id": "10092c17-bf57-4bd8-9b9d-8054862fb285",
+        "evidence_id": "14bc4aa1-7bd5-41ba-9470-3056e0baf3c1",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "sequence": 1,
+        "event_type": "EVIDENCE_UPLOADED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:24.976351+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "description": "Evidence registered and encrypted",
+        "evidence_hash": "3b4128d6d908cace251a9e404a4a5c2a65aa26d074d3ae86aab57af78c0e4df9",
+        "previous_event_hash": "",
+        "event_hash": "d7cd276f66143c4df09dcd4ccc77467e258e24dad070ef0cc62f151ed94465cb",
+        "metadata_json": {
+          "ip": "172.18.0.1",
+          "bytes": 880
+        },
+        "actor": "Investigator B",
+        "evidence_label": "NV-0419-ENDPOINT"
+      },
+      {
+        "id": "e4ea34ef-c94b-4334-a10d-bd1083d55689",
+        "evidence_id": "cc0e221f-1bea-4da7-b849-724cc6e298b8",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "sequence": 2,
+        "event_type": "INTEGRITY_VERIFIED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:22.846438+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Original fingerprint compared with decrypted stored evidence",
+        "evidence_hash": "a400f806176d2f7ce8efb2e34a5d97c85d835fdce479a6dce996a0740ab33f41",
+        "previous_event_hash": "31b902f570aca5f782d164a445bb8387c264df05d317fa42cecba668372b0ead",
+        "event_hash": "cfc4aee2f77a11f9148e6048454ae4737a17ad8b4711185547ab2d2501691f3f",
+        "metadata_json": {
+          "result": "VERIFIED",
+          "calculated_hash": "a400f806176d2f7ce8efb2e34a5d97c85d835fdce479a6dce996a0740ab33f41",
+          "elapsed_ms": 5.5920000000355685,
+          "candidate": "stored original"
+        },
+        "actor": "Investigator B",
+        "evidence_label": "NV-0419-INCIDENT"
+      },
+      {
+        "id": "3d231604-85fa-4ee6-8a61-8f66c1ab1404",
+        "evidence_id": "cc0e221f-1bea-4da7-b849-724cc6e298b8",
+        "case_id": "9415db6f-39be-4a34-bb9e-602b82bef96f",
+        "sequence": 1,
+        "event_type": "EVIDENCE_UPLOADED",
+        "actor_user_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:20.787104+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": "2d43ceef-585c-46b8-9131-42fdb4655a73",
+        "description": "Evidence registered and encrypted",
+        "evidence_hash": "a400f806176d2f7ce8efb2e34a5d97c85d835fdce479a6dce996a0740ab33f41",
+        "previous_event_hash": "",
+        "event_hash": "31b902f570aca5f782d164a445bb8387c264df05d317fa42cecba668372b0ead",
+        "metadata_json": {
+          "ip": "172.18.0.1",
+          "bytes": 809
+        },
+        "actor": "Investigator B",
+        "evidence_label": "NV-0419-INCIDENT"
+      },
+      {
+        "id": "53014ac9-be30-4bd4-842b-8fb1f32a6145",
+        "evidence_id": "ed3ea3a3-27e7-4c83-ace1-08e1821739d7",
+        "case_id": "d2586033-f643-4c26-a378-175d60b86c33",
+        "sequence": 3,
+        "event_type": "CUSTODY_TRANSFERRED",
+        "actor_user_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:18.617651+00:00",
+        "from_custodian_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "to_custodian_id": "f4622fd3-ebb1-45b8-af01-f82366358270",
+        "description": "Fictional demonstration: sealed digital evidence handed to the forensic officer for examination.",
+        "evidence_hash": "cf7e86265ebd878fad13be05b8be38a8b351679d09ec38439355b21f55642d52",
+        "previous_event_hash": "ec4d1d9c57345286ee02f95cc1e09fba8afdf12bb423153f468ab864da73a186",
+        "event_hash": "3c0fe26b141de0c0edd38b1c94abbf71a2967c420c57b1a2ccf2cecd2a0a5f29",
+        "metadata_json": {},
+        "actor": "Investigator A",
+        "evidence_label": "NV-0308-REVIEW"
+      },
+      {
+        "id": "18104141-e0e6-4dd6-9c62-b559ac71d0a7",
+        "evidence_id": "ed3ea3a3-27e7-4c83-ace1-08e1821739d7",
+        "case_id": "d2586033-f643-4c26-a378-175d60b86c33",
+        "sequence": 2,
+        "event_type": "INTEGRITY_VERIFIED",
+        "actor_user_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+        "actor_role": "INVESTIGATOR",
+        "timestamp": "2026-10-08T14:47:16.554795+00:00",
+        "from_custodian_id": null,
+        "to_custodian_id": null,
+        "description": "Original fingerprint compared with decrypted stored evidence",
+        "evidence_hash": "cf7e86265ebd878fad13be05b8be38a8b351679d09ec38439355b21f55642d52",
+        "previous_event_hash": "22f10835eb0a5f41e5e7b138804ff1d1ae0d9c325452a74bac110bc22172fc1b",
+        "event_hash": "ec4d1d9c57345286ee02f95cc1e09fba8afdf12bb423153f468ab864da73a186",
+        "metadata_json": {
+          "result": "VERIFIED",
+          "calculated_hash": "cf7e86265ebd878fad13be05b8be38a8b351679d09ec38439355b21f55642d52",
+          "elapsed_ms": 5.202583999960098,
+          "candidate": "stored original"
+        },
+        "actor": "Investigator A",
+        "evidence_label": "NV-0308-REVIEW"
+      }
+    ],
+    "blockchain": {
+      "provider": "fabric",
+      "connected": true,
+      "label": "Hyperledger Fabric connected"
+    }
+  },
+  "initial_blockchain_status": {
+    "provider": "fabric",
+    "connected": true,
+    "label": "Hyperledger Fabric connected",
+    "database": "postgresql",
+    "storage": "minio",
+    "features": {
+      "Evidence upload": "IMPLEMENTED",
+      "SHA-256 integrity": "IMPLEMENTED",
+      "AES-256-GCM": "IMPLEMENTED",
+      "Custody transfer": "IMPLEMENTED",
+      "Application hash-linked ledger": "IMPLEMENTED",
+      "OCR": "NOT IMPLEMENTED",
+      "RAG search": "DISABLED \u2014 assistance layer not implemented",
+      "MFA": "NOT IMPLEMENTED",
+      "Relationship graph": "NOT IMPLEMENTED"
+    }
+  },
+  "report_checks": [
+    {
+      "test": "Manifest contains four distinct fictional cases",
+      "passed": true
+    },
+    {
+      "test": "Manifest contains twelve distinct evidence labels",
+      "passed": true
+    },
+    {
+      "test": "NV-2026-0142: known demo lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-2026-0217: known demo lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-2026-0308: known demo lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-2026-0419: known demo lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: sample remains inside demo directory",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: nonempty fictional sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: supported transfer target",
+      "passed": true
+    },
+    {
+      "test": "Exactly one camera transcript mismatch is requested",
+      "passed": true
+    },
+    {
+      "test": "Camera transcript contains the one intended altered timestamp",
+      "passed": true
+    },
+    {
+      "test": "Exactly one witness note remains unverified",
+      "passed": true
+    },
+    {
+      "test": "Login succeeds for admin",
+      "passed": true
+    },
+    {
+      "test": "Login succeeds for investigatorA",
+      "passed": true
+    },
+    {
+      "test": "Login succeeds for investigatorB",
+      "passed": true
+    },
+    {
+      "test": "Login succeeds for forensic",
+      "passed": true
+    },
+    {
+      "test": "Login succeeds for legal",
+      "passed": true
+    },
+    {
+      "test": "Demo account exists uniquely: admin",
+      "passed": true
+    },
+    {
+      "test": "Demo account exists uniquely: investigatorA",
+      "passed": true
+    },
+    {
+      "test": "Demo account exists uniquely: investigatorB",
+      "passed": true
+    },
+    {
+      "test": "Demo account exists uniquely: forensic",
+      "passed": true
+    },
+    {
+      "test": "Demo account exists uniquely: legal",
+      "passed": true
+    },
+    {
+      "test": "Real Fabric is connected before import",
+      "passed": true
+    },
+    {
+      "test": "All active cases are demo targets or explicit retirement targets",
+      "passed": true
+    },
+    {
+      "test": "All active evidence is explicitly accounted for",
+      "passed": true
+    },
+    {
+      "test": "CASE-ROLE-cf3eb29b: retirement includes only allowlisted test evidence",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-d94ee9f1: retirement includes only allowlisted test evidence",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-17febfd1: retirement includes only allowlisted test evidence",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-360662a4: retirement includes only allowlisted test evidence",
+      "passed": true
+    },
+    {
+      "test": "CASE-2026-001: retirement includes only allowlisted test evidence",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "Private pre-change JSON baseline saved",
+      "passed": true
+    },
+    {
+      "test": "NV-2026-0142: all demo accounts are assigned",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: custody is still held by the uploading lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: forensic custody is current",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: no unsolicited custody transfer",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: custody is still held by the uploading lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: forensic custody is current",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-2026-0217: all demo accounts are assigned",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: custody is still held by the uploading lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: forensic custody is current",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: deliberately changed camera timestamp is detected",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: final integrity state is INTEGRITY_ALERT",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: witness note has no verification event",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: no unsolicited custody transfer",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: final integrity state is UNVERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: no unsolicited custody transfer",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-2026-0308: all demo accounts are assigned",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: custody is still held by the uploading lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: forensic custody is current",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: no unsolicited custody transfer",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: custody is still held by the uploading lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: forensic custody is current",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-2026-0419: all demo accounts are assigned",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: no unsolicited custody transfer",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: custody is still held by the uploading lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: forensic custody is current",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: correct case binding",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: stored original SHA-256 matches sample",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: original_filename matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: file_size matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: evidence_type matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: description matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: source matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: collection_location matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: collected_at matches manifest",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: upload was committed",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: decrypted stored original verifies",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: custody is still held by the uploading lead",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: forensic custody is current",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: final integrity state is VERIFIED",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: immutable original fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "All twelve demo items are ready before retirement",
+      "passed": true
+    },
+    {
+      "test": "CASE-ROLE-cf3eb29b: retirement allowlist rechecked",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: original custody history unchanged before archive",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-d94ee9f1: retirement allowlist rechecked",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: original custody history unchanged before archive",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-17febfd1: retirement allowlist rechecked",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: original custody history unchanged before archive",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-360662a4: retirement allowlist rechecked",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: original custody history unchanged before archive",
+      "passed": true
+    },
+    {
+      "test": "CASE-2026-001: retirement allowlist rechecked",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: original custody history unchanged before archive",
+      "passed": true
+    },
+    {
+      "test": "CASE-ROLE-cf3eb29b: case is archived",
+      "passed": true
+    },
+    {
+      "test": "CASE-ROLE-cf3eb29b: original memberships preserved",
+      "passed": true
+    },
+    {
+      "test": "CASE-ROLE-cf3eb29b: case content preserved",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-d94ee9f1: case is archived",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-d94ee9f1: original memberships preserved",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-d94ee9f1: case content preserved",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-17febfd1: case is archived",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-17febfd1: original memberships preserved",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-17febfd1: case content preserved",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-360662a4: case is archived",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-360662a4: original memberships preserved",
+      "passed": true
+    },
+    {
+      "test": "CASE-DOCKER-360662a4: case content preserved",
+      "passed": true
+    },
+    {
+      "test": "CASE-2026-001: case is archived",
+      "passed": true
+    },
+    {
+      "test": "CASE-2026-001: original memberships preserved",
+      "passed": true
+    },
+    {
+      "test": "CASE-2026-001: case content preserved",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: encrypted evidence metadata and transaction references preserved",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-QA-20261007-926048: complete original custody history preserved after archive",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: encrypted evidence metadata and transaction references preserved",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-ROLE-c346371a: complete original custody history preserved after archive",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: encrypted evidence metadata and transaction references preserved",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-d94ee9f1: complete original custody history preserved after archive",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: encrypted evidence metadata and transaction references preserved",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-17febfd1: complete original custody history preserved after archive",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: encrypted evidence metadata and transaction references preserved",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "EVD-DOCKER-360662a4: complete original custody history preserved after archive",
+      "passed": true
+    },
+    {
+      "test": "Active case list contains exactly the four realistic demo scenarios",
+      "passed": true
+    },
+    {
+      "test": "Active evidence list contains exactly twelve fictional demo originals",
+      "passed": true
+    },
+    {
+      "test": "admin: assigned four cases and twelve evidence items are visible",
+      "passed": true
+    },
+    {
+      "test": "investigatorA: assigned four cases and twelve evidence items are visible",
+      "passed": true
+    },
+    {
+      "test": "investigatorB: assigned four cases and twelve evidence items are visible",
+      "passed": true
+    },
+    {
+      "test": "forensic: assigned four cases and twelve evidence items are visible",
+      "passed": true
+    },
+    {
+      "test": "legal: assigned four cases and twelve evidence items are visible",
+      "passed": true
+    },
+    {
+      "test": "Dashboard shows four cases and twelve evidence items",
+      "passed": true
+    },
+    {
+      "test": "Dashboard shows ten verified originals and one deliberate alert",
+      "passed": true
+    },
+    {
+      "test": "One witness note remains honestly unverified",
+      "passed": true
+    },
+    {
+      "test": "Dashboard records the seven requested forensic handoffs",
+      "passed": true
+    },
+    {
+      "test": "Dashboard records eleven successful checks and one modified candidate",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-TRIAGE: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-ENDPOINT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0419-INCIDENT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-REVIEW: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-STOCK: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0308-ACCESS: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-SCENE: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-WITNESS: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0217-CAMERA: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-FORENSIC: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-PAYMENT: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: valid custody hash chain",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: custody upload exists",
+      "passed": true
+    },
+    {
+      "test": "NV-0142-EMAIL: every custody event has a committed Fabric transaction",
+      "passed": true
+    },
+    {
+      "test": "Dashboard committed count equals actual active custody events",
+      "passed": true
+    },
+    {
+      "test": "Fabric remains connected after demo refresh",
+      "passed": true
+    }
+  ]
+}

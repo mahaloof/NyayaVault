@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "Populated target rejected",
+      "passed": true,
+      "message": "NyayaVault transfer: Target project already has containers. Restore to an unused project; no existing data will be overwritten."
+    },
+    {
+      "test": "Corrupted snapshot rejected",
+      "passed": true,
+      "message": "NyayaVault transfer: Snapshot checksum mismatch: baseline.json"
+    },
+    {
+      "test": "Original portable configuration unchanged after rejected imports",
+      "passed": true
+    },
+    {
+      "test": "Corrupted snapshot creates no target data volume",
+      "passed": true
+    }
+  ]
+}

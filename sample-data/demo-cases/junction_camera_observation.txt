@@ -1,0 +1,15 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0217 | Exhibit T1: camera observation transcript
+Camera reference: DEMO-RJ-03; simulated timestamp offset: +42 seconds.
+Reported incident time: 2026-10-04 22:18 IST.
+22:17:58 Camera time — a delivery bicycle enters the marked crossing.
+22:18:02 Camera time — a grey van approaches from the eastern service road.
+22:18:04 Camera time — the van passes the crossing; contact is not clearly visible.
+22:18:09 Camera time — a rider is visible beside the crossing.
+Vehicle label: DEMO-VAN-17; no genuine registration number is represented.
+Review limitation: this is a written training transcript, not CCTV footage.
+No speed measurement or conclusive fault assignment is made.
+Preservation purpose: demonstrate how a changed transcript is detected later.

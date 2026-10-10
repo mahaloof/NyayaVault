@@ -1,0 +1,29 @@
+services:
+  fabric-gateway:
+    build: ./blockchain/gateway
+    environment:
+      GATEWAY_HOST: 0.0.0.0
+      FABRIC_PEER_ENDPOINT: peer0.org1.example.com:7051
+      FABRIC_PEER_HOST: peer0.org1.example.com
+      FABRIC_MSP_ID: Org1MSP
+      FABRIC_CHANNEL: nyayachannel
+      FABRIC_CHAINCODE: nyayavault
+      FABRIC_TLS_CERT: /identity/tls.crt
+      FABRIC_CERT: /identity/cert.pem
+      FABRIC_KEY: /identity/key.pem
+      FABRIC_GATEWAY_SECRET: ${FABRIC_GATEWAY_SECRET:?Set FABRIC_GATEWAY_SECRET}
+    volumes:
+      - ./blockchain/runtime/gateway-identity:/identity:ro
+    networks: [default, fabric]
+    restart: unless-stopped
+  backend:
+    environment:
+      BLOCKCHAIN_PROVIDER: fabric
+      FABRIC_GATEWAY_URL: http://fabric-gateway:4000
+      FABRIC_GATEWAY_SECRET: ${FABRIC_GATEWAY_SECRET:?Set FABRIC_GATEWAY_SECRET}
+    depends_on:
+      fabric-gateway: {condition: service_started}
+networks:
+  fabric:
+    external: true
+    name: fabric_test

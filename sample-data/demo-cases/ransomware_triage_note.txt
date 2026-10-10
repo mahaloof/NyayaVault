@@ -1,0 +1,12 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0419 | Exhibit R3: preliminary triage
+Scope: written exercise records only; no actual device image was acquired.
+Preservation priorities: document collection, retain originals and compare exported copies.
+Reported effect: loss of availability of teaching-share files; extent not confirmed.
+Recovery review: a previous-day backup is reported but restoration is not yet validated.
+Open questions: initial access, affected accounts, data exposure and backup completeness.
+Conclusion: retain incident status OPEN pending examination of authorized source material.
+No malware analysis claim or real victim information is made by this document.

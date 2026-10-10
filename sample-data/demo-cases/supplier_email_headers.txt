@@ -1,0 +1,20 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0142 | Exhibit A1: email header and message extract
+Collection reference: mailbox-demo-accounts / message DEMO-MSG-042
+Message date: 2026-10-04 15:42 IST
+From: billing@aster-supplier.example
+Reply-To: payments@aster-supplier-support.example
+To: accounts@aster-office.example
+Subject: Revised beneficiary details — Invoice DEMO-INV-1042
+Message-ID: <demo-1042@aster-supplier.example>
+Authentication-Results: SPF fail; DKIM absent; DMARC fail (simulated)
+Attachment filename: DEMO-INV-1042-revised.pdf
+Body excerpt: Please use the revised beneficiary for the outstanding invoice.
+Original expected amount: INR 480,000.00
+Collection scope: one message exported with headers; mailbox not reproduced.
+Analyst note: display name resembles a known supplier; the reply-to domain differs.
+Interpretation: these indicators justify examination, not a conclusion about the sender.
+Handoff purpose: forensic validation of the supplied mailbox extract.

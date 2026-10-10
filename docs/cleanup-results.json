@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-07",
+  "removed": [
+    {
+      "path": "outputs/nyayavault/frontend/.next/cache",
+      "bytes": 122521979
+    },
+    {
+      "path": "outputs/nyayavault/frontend/tsconfig.tsbuildinfo",
+      "bytes": 126942
+    },
+    {
+      "path": "outputs/nyayavault/backend/.pytest_cache",
+      "bytes": 1814
+    },
+    {
+      "path": "outputs/nyayavault/backend/app/__pycache__",
+      "bytes": 48816
+    },
+    {
+      "path": "outputs/nyayavault/backend/app/routers/__pycache__",
+      "bytes": 46035
+    },
+    {
+      "path": "outputs/nyayavault/backend/tests/__pycache__",
+      "bytes": 63396
+    },
+    {
+      "path": "outputs/nyayavault/backend/alembic/__pycache__",
+      "bytes": 934
+    },
+    {
+      "path": "outputs/nyayavault/backend/alembic/versions/__pycache__",
+      "bytes": 16944
+    },
+    {
+      "path": "outputs/nyayavault/scripts/__pycache__",
+      "bytes": 11109
+    },
+    {
+      "path": "work/fabric-final-build.log",
+      "bytes": 14889
+    },
+    {
+      "path": "work/fabric-install.log",
+      "bytes": 27327
+    },
+    {
+      "path": "work/fabric-app-start.log",
+      "bytes": 782
+    },
+    {
+      "path": "work/fabric-app-build.log",
+      "bytes": 39779
+    },
+    {
+      "path": "work/fabric-deploy.log",
+      "bytes": 10323
+    },
+    {
+      "path": "work/fabric-network.log",
+      "bytes": 21511
+    },
+    {
+      "path": "work/install-fabric.sh",
+      "bytes": 11135
+    },
+    {
+      "path": "/tmp/backup-central.py",
+      "bytes": 2402
+    },
+    {
+      "path": "/tmp/organize-nyayavault.py",
+      "bytes": 2234
+    }
+  ],
+  "bytes_removed": 122968351,
+  "keys_unchanged": true,
+  "docker_cleanup": "No containers, images or volumes removed: all current containers are required; build cache already zero.",
+  "preserved": [
+    "Database and evidence volumes",
+    "Fabric ledger and identities",
+    "Root and backend encryption settings",
+    "Local SQLite evidence",
+    "Partial backup marked INCOMPLETE",
+    "Project dependencies and production build",
+    "Test records and reports"
+  ]
+}

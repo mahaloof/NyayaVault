@@ -1,0 +1,15 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0142 | Exhibit A3: preliminary forensic triage
+Device reference: DEMO-LAPTOP-FIN-02
+Analyst role: Forensic Officer (demonstration account)
+Inputs examined: simulated message metadata and account event summary.
+Finding 1: the message requested a beneficiary change outside the routine invoice cycle.
+Finding 2: reply-to and displayed sender domains do not match.
+Finding 3: an inbox forwarding rule named InvoiceCopy was reported at 15:35 IST.
+Status of forwarding-rule attribution: unconfirmed; full identity logs required.
+Recommended next steps: compare original server logs; obtain authorized provider records.
+Limitations: no live mailbox, disk image or real provider data was examined.
+Opinion: preliminary indicators only; preserve originals and test alternatives.

@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import grpc from '@grpc/grpc-js';
+import {connect,signers} from '@hyperledger/fabric-gateway';
+import express from 'express';
+for(const key of ['FABRIC_TLS_CERT','FABRIC_CERT','FABRIC_KEY','FABRIC_GATEWAY_SECRET'])if(!process.env[key])throw new Error('Required environment: '+key);
+const client=new grpc.Client(process.env.FABRIC_PEER_ENDPOINT||'localhost:7051',grpc.credentials.createSsl(fs.readFileSync(process.env.FABRIC_TLS_CERT)),{'grpc.ssl_target_name_override':process.env.FABRIC_PEER_HOST||'peer0.org1.example.com'});
+const gateway=connect({client,identity:{mspId:process.env.FABRIC_MSP_ID||'Org1MSP',credentials:fs.readFileSync(process.env.FABRIC_CERT)},signer:signers.newPrivateKeySigner(crypto.createPrivateKey(fs.readFileSync(process.env.FABRIC_KEY))),evaluateOptions:()=>({deadline:Date.now()+5000}),endorseOptions:()=>({deadline:Date.now()+5000}),submitOptions:()=>({deadline:Date.now()+5000}),commitStatusOptions:()=>({deadline:Date.now()+15000})});
+const contract=gateway.getNetwork(process.env.FABRIC_CHANNEL||'nyayachannel').getContract(process.env.FABRIC_CHAINCODE||'nyayavault');
+const app=express();app.use(express.json({limit:'128kb'}));
+app.use((req,res,next)=>{const provided=Buffer.from(req.headers.authorization||'');const expected=Buffer.from('Bearer '+process.env.FABRIC_GATEWAY_SECRET);if(provided.length!==expected.length||!crypto.timingSafeEqual(provided,expected))return res.sendStatus(401);next()});
+app.get('/health',async(req,res)=>{try{await contract.evaluateTransaction('Health');res.json({connected:true})}catch(e){console.error(e);res.status(503).json({error:'Fabric unavailable'})}});
+app.post('/events',async(req,res)=>{try{const proposal=contract.newProposal('RecordCustodyEvent',{arguments:[JSON.stringify(req.body)]});const transaction=await proposal.endorse();const submitted=await transaction.submit();const status=await submitted.getStatus();if(!status.successful)throw new Error('Commit validation failed');const result=JSON.parse(Buffer.from(transaction.getResult()).toString());res.json({tx_id:result.txId})}catch(e){console.error(e);res.status(503).json({error:'Fabric transaction failed'})}});
+app.get('/history/:id',async(req,res)=>{try{const result=await contract.evaluateTransaction('GetEvidenceHistory',req.params.id);res.json(JSON.parse(Buffer.from(result).toString()))}catch(e){console.error(e);res.status(503).json({error:'Fabric query failed'})}});
+app.listen(4000,process.env.GATEWAY_HOST||'127.0.0.1',()=>console.log('Fabric gateway listening on port 4000'));
+process.on('SIGTERM',()=>{gateway.close();client.close();process.exit(0)});

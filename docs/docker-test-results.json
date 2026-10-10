@@ -1,0 +1,189 @@
+{
+  "api": "http://127.0.0.1:8001/api",
+  "elapsed_seconds": 0.4602884170017205,
+  "checks": [
+    {
+      "test": "Unauthenticated access denied",
+      "passed": true
+    },
+    {
+      "test": "Login admin",
+      "passed": true
+    },
+    {
+      "test": "Login investigatorA",
+      "passed": true
+    },
+    {
+      "test": "Login investigatorB",
+      "passed": true
+    },
+    {
+      "test": "Login legal",
+      "passed": true
+    },
+    {
+      "test": "Create PostgreSQL case with assignments",
+      "passed": true
+    },
+    {
+      "test": "Upload to encrypted object storage",
+      "passed": true
+    },
+    {
+      "test": "Correct original SHA-256",
+      "passed": true
+    },
+    {
+      "test": "Unassigned user cannot see evidence",
+      "passed": true
+    },
+    {
+      "test": "Assigned non-custodian transfer denied",
+      "passed": true
+    },
+    {
+      "test": "Original candidate verified",
+      "passed": true
+    },
+    {
+      "test": "Stored MinIO ciphertext decrypts and verifies",
+      "passed": true
+    },
+    {
+      "test": "Custody moves A to B",
+      "passed": true
+    },
+    {
+      "test": "Modified candidate detected",
+      "passed": true
+    },
+    {
+      "test": "Trusted fingerprint preserved",
+      "passed": true
+    },
+    {
+      "test": "Authorized download equals original",
+      "passed": true
+    },
+    {
+      "test": "Custody chain valid",
+      "passed": true
+    },
+    {
+      "test": "All core events recorded",
+      "passed": true
+    },
+    {
+      "test": "Audit records match custody events",
+      "passed": true
+    },
+    {
+      "test": "Dashboard records actual alert",
+      "passed": true
+    },
+    {
+      "test": "No fabricated Fabric connection",
+      "passed": true
+    },
+    {
+      "test": "Logout",
+      "passed": true
+    },
+    {
+      "test": "Logged-out token rejected",
+      "passed": true
+    }
+  ],
+  "evidence": {
+    "id": "65c9c79e-e8da-4b4f-b36e-88c53f252e9c",
+    "evidence_id": "EVD-DOCKER-360662a4",
+    "case_id": "a9b29f6d-7723-4c25-9dac-a0610a3c0ea9",
+    "original_filename": "forensic_report_original.txt",
+    "mime_type": "text/plain",
+    "file_size": 287,
+    "evidence_type": "Forensic Report",
+    "description": "Synthetic Docker integration test",
+    "source": "",
+    "collection_location": "",
+    "collected_at": "",
+    "sha256_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "encryption_metadata": {
+      "algorithm": "AES-256-GCM",
+      "nonce": "first 12 bytes",
+      "aad": "evidence UUID",
+      "key_version": "1"
+    },
+    "uploaded_by": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+    "current_custodian_id": "3ff734ee-3fc4-48ed-87e7-745026a306fd",
+    "status": "REGISTERED",
+    "integrity_status": "UNVERIFIED",
+    "created_at": "2026-10-05T17:03:51.435460+00:00",
+    "timings": {
+      "hash_ms": 0.005333000103746599,
+      "encryption_ms": 0.9442919999855803,
+      "database_ms": 10.026458000083949,
+      "upload_ms": 97.55762500003584
+    },
+    "case_number": "CASE-DOCKER-360662a4",
+    "case_title": "Docker acceptance \u2014 synthetic investigation",
+    "custodian": "Investigator A",
+    "uploader": "Investigator A",
+    "tags": [
+      "docker-acceptance",
+      "synthetic"
+    ],
+    "blockchain_transactions": [
+      {
+        "id": "c3d5d6c9-442c-492c-92cb-6ef81f3b0d16",
+        "event_id": "0d7a34bf-7a33-40bd-adca-dbde022c1445",
+        "status": "DEVELOPMENT",
+        "tx_id": null,
+        "error": null,
+        "elapsed_ms": 0.0
+      }
+    ],
+    "completed_steps": [
+      "File received",
+      "SHA-256 fingerprint generated",
+      "AES-256-GCM encrypted",
+      "Encrypted evidence stored",
+      "Metadata recorded",
+      "Custody event created"
+    ]
+  },
+  "verification": {
+    "matched": true,
+    "result": "VERIFIED",
+    "message": "EVIDENCE INTEGRITY VERIFIED",
+    "trusted_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "calculated_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "verified_by": "Investigator A",
+    "timestamp": "2026-10-05T17:03:51.463429+00:00",
+    "elapsed_ms": 0.7504999999810025
+  },
+  "tampered": {
+    "matched": false,
+    "result": "INTEGRITY_ALERT",
+    "message": "INTEGRITY VERIFICATION FAILED",
+    "trusted_hash": "3f37a64133433f7a51dd3e95948f438929c302d639c34ab360b0baded75eae40",
+    "calculated_hash": "7d5bca68817339e524b6e025f6f778afe7fce795f3e29d9ea39f7f49efdfd78c",
+    "verified_by": "Investigator B",
+    "timestamp": "2026-10-05T17:03:51.485937+00:00",
+    "elapsed_ms": 0.9409169999798905
+  },
+  "ledger": {
+    "valid": true,
+    "events": 6,
+    "head": "e076a08a4729cbbd709cfdaed8d14ce11c35e2346934cae88adab812fe1c6b72"
+  },
+  "metrics": {
+    "average_hash_ms": 0.005,
+    "average_encryption_ms": 0.944,
+    "average_upload_ms": 97.558,
+    "average_database_ms": 10.026,
+    "average_verification_ms": 1.779,
+    "average_decryption_ms": 2.251,
+    "average_blockchain_ms": null
+  }
+}

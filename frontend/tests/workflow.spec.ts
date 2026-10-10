@@ -1,0 +1,36 @@
+import {test,expect} from '@playwright/test';
+import path from 'node:path';
+test('live browser evidence preservation workflow',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('/login');await page.getByLabel('Password',{exact:true}).fill('DemoOnly!2026');await page.getByRole('button',{name:'Sign in securely'}).click();
+ await expect(page.getByRole('heading',{name:'Evidence overview'})).toBeVisible();
+ await page.getByRole('link',{name:'Register evidence',exact:true}).click();
+ await page.getByLabel('Investigation case').selectOption({label:'CASE-2026-001 · Cyber Crime Investigation'});
+ const eid='EVD-UI-'+Date.now();await page.getByLabel('Evidence ID',{exact:true}).fill(eid);
+ await page.getByLabel('Description',{exact:true}).fill('Browser acceptance test — synthetic forensic report');
+ await page.getByLabel('Evidence file',{exact:true}).setInputFiles(path.resolve('../sample-data/forensic_report_original.txt'));
+ await page.getByRole('button',{name:'Encrypt & register evidence'}).click();await expect(page.getByRole('heading',{name:'Evidence registered',exact:true})).toBeVisible();
+ await page.getByRole('link',{name:'View evidence',exact:true}).click();
+ await expect(page.getByRole('heading',{name:eid,exact:true})).toBeVisible();const evidenceURL=page.url();
+ await page.getByRole('link',{name:'Verify integrity',exact:true}).first().click();
+ await page.getByLabel('Candidate file (optional)').setInputFiles(path.resolve('../sample-data/forensic_report_original.txt'));
+ await page.getByRole('button',{name:'Verify evidence',exact:true}).click();await expect(page.getByRole('heading',{name:'EVIDENCE INTEGRITY VERIFIED',exact:true})).toBeVisible();
+ await page.getByRole('link',{name:'Transfer custody',exact:true}).click();
+ await page.getByLabel('Transfer to authorized case member').selectOption({label:'Investigator B · INVESTIGATOR'});
+ await page.getByLabel('Transfer reason').fill('Forensic review by Investigator B');await page.getByRole('checkbox').check();await page.getByRole('button',{name:'Confirm custody transfer'}).click();
+ await expect(page.getByText('Investigator A', {exact:false}).first()).toBeVisible();
+ await expect(page.getByText('CUSTODY TRANSFERRED',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Sign out',exact:true}).click();await page.getByLabel('Email address').fill('investigatorB@nyayavault.local');await page.getByLabel('Password',{exact:true}).fill('DemoOnly!2026');await page.getByRole('button',{name:'Sign in securely'}).click();await expect(page.getByRole('heading',{name:'Evidence overview'})).toBeVisible();
+ await page.goto(evidenceURL+'/verify');await page.getByLabel('Candidate file (optional)').setInputFiles(path.resolve('../sample-data/forensic_report_modified.txt'));await page.getByRole('button',{name:'Verify evidence',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'INTEGRITY VERIFICATION FAILED',exact:true})).toBeVisible();
+ await page.screenshot({path:'../docs/verification-screenshot.png',fullPage:true});
+ await page.getByRole('link',{name:'Chain of custody',exact:true}).click();await expect(page.getByText('INTEGRITY FAILED',{exact:true})).toBeVisible();
+ await page.getByRole('link',{name:'Audit trail',exact:true}).click();await page.getByRole('textbox',{name:'Search audit'}).fill(eid);await expect(page.getByText('INTEGRITY FAILED',{exact:true})).toBeVisible();
+ await page.getByRole('link',{name:'Overview',exact:true}).click();await expect(page.getByRole('heading',{name:'Evidence overview'})).toBeVisible();await page.screenshot({path:'../docs/dashboard-screenshot.png',fullPage:true});
+ expect(errors).toEqual([]);
+});
+test('login validation and mobile layout',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await page.goto('/login');await page.getByLabel('Password',{exact:true}).fill('incorrect');await page.getByRole('button',{name:'Sign in securely'}).click();await expect(page.getByRole('alert')).toContainText('Invalid email or password');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBeTruthy();
+ await page.screenshot({path:'../docs/mobile-login-screenshot.png',fullPage:true});
+});

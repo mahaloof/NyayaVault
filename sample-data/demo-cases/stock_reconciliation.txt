@@ -1,0 +1,13 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0308 | Exhibit W2: stock reconciliation
+Item: training handheld scanner model DEMO-SCAN-X.
+Expected bay quantity: 120 units; initial counted quantity: 96 units.
+Initial variance: 24 units.
+Transfer document: DEMO-MOVE-830; destination: internal overflow cage C.
+Subsequent count: 24 units located in cage C during joint reconciliation.
+Serial references: DEMO-SCN-097 through DEMO-SCN-120; invented identifiers.
+Review outcome: unexplained shortage resolved as an unposted internal movement.
+This record illustrates retaining evidence after a reported loss is resolved.

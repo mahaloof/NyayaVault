@@ -1,0 +1,14 @@
+FICTIONAL TRAINING MATERIAL — NYAYAVAULT DEMONSTRATION
+All people, organizations, accounts, devices and events below are invented.
+This is not an official police record, live system export or real evidence.
+
+CASE NV-2026-0308 | Exhibit W1: loading-bay access events
+Export reference: DEMO-ACCESS-B-1002; timezone IST.
+2026-10-02 18:41:02 | DEMO-BADGE-11 | Bay B entry | granted
+2026-10-02 18:54:18 | DEMO-BADGE-24 | Bay B entry | granted
+2026-10-02 19:02:47 | DEMO-BADGE-24 | Bay B exit | granted
+2026-10-02 19:18:09 | DEMO-BADGE-11 | Bay B exit | granted
+2026-10-02 19:21:14 | DEMO-BADGE-77 | Bay B entry | denied
+Reader clock check: simulated offset within 3 seconds of reference clock.
+Badge activity does not establish who physically carried a badge.
+No real employee identities or security-system logs are included.
