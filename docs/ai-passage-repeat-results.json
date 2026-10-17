@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2026-10-16",
+    "case": "NV-2026-0308",
+    "evidence_files": 3,
+    "summary_succeeded": true,
+    "claims": 6,
+    "all_citations_validated": true,
+    "fabric_connected": true,
+    "assistant_tests_passed": 24
+  },
+  {
+    "date": "2026-10-16",
+    "case": "NV-2026-0308",
+    "evidence_files": 3,
+    "summary_succeeded": true,
+    "claims": 5,
+    "all_citations_validated": true,
+    "fabric_connected": true,
+    "assistant_tests_passed": 24
+  }
+]

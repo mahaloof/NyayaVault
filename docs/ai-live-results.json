@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "check": "Gemini configured in running backend",
+      "passed": true
+    },
+    {
+      "check": "Selected evidence matches fictional local demo file",
+      "passed": true
+    },
+    {
+      "check": "Live summary API succeeded",
+      "passed": true
+    },
+    {
+      "check": "Live summary has cited claims",
+      "passed": true
+    },
+    {
+      "check": "All live citations match supplied excerpts",
+      "passed": true
+    },
+    {
+      "check": "Live question API succeeded",
+      "passed": true
+    },
+    {
+      "check": "Disclosure confirmation enforced",
+      "passed": true
+    },
+    {
+      "check": "Viewer blocked",
+      "passed": true
+    },
+    {
+      "check": "Anonymous request blocked",
+      "passed": true
+    },
+    {
+      "check": "Fabric remains connected",
+      "passed": true
+    }
+  ],
+  "model": "gemini-3.5-flash-lite",
+  "provider": "Google Gemini",
+  "live_requests": 4,
+  "summary_claims": 3,
+  "fictional_evidence_only": true,
+  "preservation": {
+    "blockchain_transactions": true,
+    "case_members": true,
+    "cases": true,
+    "custody_events": true,
+    "encrypted_objects": true,
+    "encryption_key_digest": true,
+    "evidence": true,
+    "users": true
+  },
+  "pdf_extraction": "real Poppler extraction passed in backend container",
+  "docker_application_rebuild": "passed",
+  "browser_question_with_citations": "passed",
+  "live_request_breakdown": {
+    "synthetic_provider_smoke": 1,
+    "application_api": 2,
+    "browser": 1
+  }
+}

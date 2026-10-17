@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import field_validator
+from pydantic import field_validator, SecretStr
 import base64
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
@@ -18,6 +18,9 @@ class Settings(BaseSettings):
     fabric_gateway_url: str = "http://127.0.0.1:4000"
     fabric_gateway_secret: str = ""
     cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
+    ai_provider: str = "disabled"
+    gemini_api_key: SecretStr = SecretStr("")
+    ai_model: str = "gemini-3.5-flash-lite"
     max_file_mb: int = 25
     @field_validator("jwt_secret")
     @classmethod

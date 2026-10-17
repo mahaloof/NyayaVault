@@ -24,6 +24,9 @@ services:
     build: ./backend
     environment:
       DATABASE_URL: postgresql+psycopg://vault:${POSTGRES_PASSWORD}@postgres:5432/nyayavault
+      AI_PROVIDER: ${AI_PROVIDER:-disabled}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      AI_MODEL: ${AI_MODEL:-gemini-3.5-flash-lite}
       JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET}
       EVIDENCE_MASTER_KEY: ${EVIDENCE_MASTER_KEY:?Set EVIDENCE_MASTER_KEY}
       STORAGE_PROVIDER: minio

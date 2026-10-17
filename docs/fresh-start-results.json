@@ -1,0 +1,28 @@
+{
+  "counts": {
+    "cases": 0,
+    "case_members": 0,
+    "evidence": 0,
+    "custody_events": 0,
+    "blockchain_transactions": 0,
+    "verification_logs": 0,
+    "audit_logs": 0,
+    "tags": 0,
+    "evidence_tags": 0,
+    "ocr_documents": 0
+  },
+  "encrypted_objects": 0,
+  "api_empty": true,
+  "fabric_connected": true,
+  "ai_ocr_available": true,
+  "date": "2026-10-17",
+  "users_preserved": 5,
+  "configuration_and_keys_preserved": true,
+  "old_evidence_histories_empty_on_both_peers": 17,
+  "peer_heights": {
+    "peer0.org1.example.com": 4,
+    "peer0.org2.example.com": 4
+  },
+  "setup_only_blocks": true,
+  "recovery_backup": "cleanup-recovery/before-fresh-start-20261016"
+}

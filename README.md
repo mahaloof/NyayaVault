@@ -1,4 +1,8 @@
 # NyayaVault
+
+**How to run:** [RUN_PROJECT.md](RUN_PROJECT.md) — Windows Docker setup, empty startup, login accounts and optional AI/OCR.
+
+**Current local data (17 October 2026):** reset to zero cases, evidence and evidence transactions at the user’s request. Existing accounts and AI/OCR are retained. See [fresh-start details](docs/FRESH_START.md).
 ### Secure Digital Evidence & Chain-of-Custody Platform
 
 A working B.Tech Phase-II prototype for registering encrypted digital evidence, preserving its original SHA-256 fingerprint, verifying candidate files, transferring custody, and inspecting a tamper-evident audit trail.
@@ -100,13 +104,15 @@ No original evidence bytes are submitted to Fabric. The Gateway bridge is necess
 - Local and MinIO adapters, development/Fabric providers, real Fabric Gateway submission code, chaincode, explicit submission failures, and operator replay.
 - Explicit Alembic migration, test suites, synthetic sample files, documentation, Docker configuration.
 
-**Not implemented:** OCR, document classification, RAG/LLM search, relationship graph, MFA. These are optional future modules and visibly disabled/not implemented. No AI API key is required.
+**Case assistant:** optional Google Gemini summaries and question answering over selected text, PDF and scanned-document excerpts, with quoted citations and server-enforced access. See [configuration and limits](docs/AI_ASSISTANT.md). Disabled until a backend API key is configured.
+
+**Not implemented:** Reliable handwriting recognition, document classification, semantic/vector RAG, relationship graph, MFA. These are optional future modules and visibly disabled/not implemented. No AI API key is required for the core evidence workflow.
 
 ## Database architecture
 
 `users` → `case_members` ← `cases` → `evidence` → `custody_events`, `verification_logs`.
 `evidence` ↔ `evidence_tags` ↔ `tags`. `custody_events` → `blockchain_transactions`.
-`audit_logs` records case/user/evidence operations. `ocr_documents` reserves storage for a future derived-text module; no OCR functionality is claimed.
+`audit_logs` records case/user/evidence operations. `ocr_documents` remains unused; the assistant performs local, temporary OCR without persisting derived text.
 
 UUID internal keys are separate from human case/evidence identifiers. Unique identifiers and indexed case, evidence, hash and timestamp fields support lookup. Events include a per-evidence sequence, prior hash, complete-event hash, actor role at event time, custody endpoints and metadata. Trusted original hash and object name cannot be changed through the database guards or API. Migrations are in `backend/alembic/versions/001_initial.py` and contain explicit table/index definitions.
 
@@ -148,7 +154,7 @@ See `.env.example`. Backend reads `backend/.env` when launched from `backend/`. 
 | MAX_FILE_MB | Maximum evidence/candidate file size; default 25 |
 | NEXT_PUBLIC_API_URL | Frontend API base; requires rebuild after change |
 
-`FABRIC_CONNECTION_PROFILE` is a documented legacy placeholder; the Gateway uses certificate paths, not this profile. `AI_PROVIDER`/`AI_API_KEY` are reserved and unused.
+`FABRIC_CONNECTION_PROFILE` is a documented legacy placeholder; the Gateway uses certificate paths, not this profile. `AI_PROVIDER=gemini`, `GEMINI_API_KEY` and `AI_MODEL` configure the optional case assistant. `AI_API_KEY` remains unused.
 
 ## Hyperledger Fabric
 

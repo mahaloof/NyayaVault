@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-16",
+  "docker_assistant_and_document_tests": 35,
+  "existing_workflow_tests_passed": 22,
+  "typescript_check": true,
+  "frontend_production_build": true,
+  "real_ocr_formats": [
+    "scanned PDF",
+    "PNG",
+    "JPEG"
+  ],
+  "selectable_pdf_extraction": true,
+  "two_page_api_citation_test": true,
+  "live_gemini_from_scanned_pdf": true,
+  "live_cited_page": 2,
+  "temporary_memory_files_cleaned": true,
+  "preservation_snapshot_matches": true,
+  "fabric_connected": true,
+  "deployed": [
+    "backend",
+    "frontend"
+  ],
+  "limitations": [
+    "Printed English OCR; handwriting and other languages unreliable",
+    "First 20 PDF pages",
+    "10 MiB per file; four selected files",
+    "6000 extracted characters per file shared across readable pages",
+    "Fictional demo data only for configured Gemini integration"
+  ]
+}

@@ -4,10 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from sqlalchemy.exc import IntegrityError,OperationalError
 from app.config import settings
-from app.routers import auth,cases,evidence,reporting
+from app.routers import auth,cases,evidence,reporting,assistant
 app=FastAPI(title="NyayaVault",version="1.0.0")
 app.add_middleware(CORSMiddleware,allow_origins=settings.cors_origins.split(","),allow_methods=["GET","POST","PUT"],allow_headers=["Authorization","Content-Type"])
-for router in (auth.router,cases.router,evidence.router,reporting.router): app.include_router(router)
+for router in (auth.router,cases.router,evidence.router,reporting.router,assistant.router): app.include_router(router)
 @app.middleware("http")
 async def headers(request,call_next):
     response=await call_next(request);response.headers["X-Content-Type-Options"]="nosniff";response.headers["Cache-Control"]="no-store";return response

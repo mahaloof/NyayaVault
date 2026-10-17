@@ -1,8 +1,10 @@
 # Run NyayaVault on Windows
 
+**Start here for a new GitHub download:** [RUN_PROJECT.md](RUN_PROJECT.md) has the empty-workspace startup command, login accounts and AI/OCR setup. The snapshot counts below describe the historical October 8 transfer package, not the current running database. Private ZIPs and transfer snapshots are not included in GitHub.
+
 Use Docker Desktop with **Linux containers**. This project keeps the same Next.js application, FastAPI backend, PostgreSQL database, encrypted MinIO storage and two-organization Hyperledger Fabric blockchain. No Python, Node.js, Git or Fabric binaries need to be installed on Windows.
 
-**Downloaded from GitHub?** The repository contains source and fictional demo files, not private backups. For a new demonstration, open PowerShell in the project folder and run `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\windows\Start.ps1`, then open http://127.0.0.1:3001. The import instructions below apply only when you also have the private transfer package.
+**Downloaded from GitHub?** The repository contains source and fictional demo files, not private backups. For a new demonstration, open PowerShell in the project folder and run `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\windows\Start.ps1 -NoDemo`, then open http://127.0.0.1:3001. The import instructions below apply only when you also have the private transfer package.
 
 ## Keep the current data — recommended for this transfer
 

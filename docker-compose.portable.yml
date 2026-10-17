@@ -153,6 +153,9 @@ services:
     image: nyayavault-backend:portable-1.0
     environment:
       DATABASE_URL: postgresql+psycopg://vault:${POSTGRES_PASSWORD}@postgres:5432/nyayavault
+      AI_PROVIDER: ${AI_PROVIDER:-disabled}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      AI_MODEL: ${AI_MODEL:-gemini-3.5-flash-lite}
       JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env.portable}
       EVIDENCE_MASTER_KEY: ${EVIDENCE_MASTER_KEY:?Set EVIDENCE_MASTER_KEY in .env.portable}
       STORAGE_PROVIDER: minio
