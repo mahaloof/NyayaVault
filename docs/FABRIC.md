@@ -79,3 +79,20 @@ The first script creates synthetic records. The second compares real peer histor
 ## Trust boundary
 
 Only metadata/proofs are sent to Fabric; encrypted file bytes remain in MinIO. The service signs using Org1 User1 and records the application actor separately. Login users do not each have a Fabric certificate. FastAPI enforces roles/case membership; chaincode permits Org1MSP/Org2MSP. Production needs organization-specific identities, authorization/endorsement design, managed keys, TLS between app services, durable retries and operational review. Cryptogen sample keys and demo credentials are unsuitable for production.
+
+## Missing endorsement peers after restart
+
+If the gateway can answer health queries but uploads fail with `no combination of peers can be derived which satisfy the endorsement policy`, inspect peer logs. A confirmed cause in the local legacy network was missing `AnchorPeers` entries for both organizations following the earlier reset. The health endpoint only evaluates a query; it does not establish that a write can obtain both endorsements.
+
+For that specific missing-anchor condition, start the existing network and run:
+
+```sh
+bash scripts/start-fabric.sh
+bash scripts/repair-fabric-discovery.sh
+```
+
+The repair builds the existing Fabric 2.5.16 administration image, fetches current channel configuration and adds missing Org1/Org2 anchor-peer entries through signed channel updates. Existing anchor settings are left untouched. It does not reset peers, replace keys, change endorsement policy or replay evidence transactions. Before/after configuration files remain under the Git-ignored `blockchain/runtime/anchor-repair/` directory. Requires Docker and network access for the first build. This wrapper targets the existing legacy local network, not the separate portable deployment.
+
+This repair was applied on 18 October 2026. Twelve subsequent evidence uploads, twelve integrity checks and four transfers produced 28 committed transactions; decrypted originals and peer histories were checked. The initial failed upload was retried as the same previously uncommitted event with a `FABRIC_SUBMISSION_RETRY` audit entry. A failed event is not automatically repaired merely by adding anchors, and its status must never be changed to COMMITTED without a real successful Fabric commit.
+
+Rerunning the repair when both anchor entries exist performs only configuration reads, with no additional channel updates. For other endorsement errors, investigate peer availability, chaincode readiness and policy rather than weakening the two-organization policy.
