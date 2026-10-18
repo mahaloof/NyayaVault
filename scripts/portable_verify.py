@@ -100,7 +100,10 @@ with SessionLocal() as db:
   proofs.append(proof)
  counts={table:len(rows) for table,rows in tables.items()}
  counts.update(active_cases=sum(case['status']!='ARCHIVED' for case in tables['cases']),archived_cases=sum(case['status']=='ARCHIVED' for case in tables['cases']),encrypted_objects=len(objects),fabric_events=sum(item['events'] for item in proofs))
- passed=bool(tables['evidence']) and settings.blockchain_provider=='fabric' and all(item['ciphertext_valid'] and item['original_valid'] for item in objects) and all(item['chain']['valid'] and item['peer_matches'] for item in proofs)
+ evidence_ids={item['id'] for item in tables['evidence']}
+ event_ids={item['id'] for item in tables['custody_events']}
+ references_valid=all(item['evidence_id'] in evidence_ids for item in tables['custody_events']) and all(item['event_id'] in event_ids for item in tables['blockchain_transactions'])
+ passed=references_valid and settings.blockchain_provider=='fabric' and all(item['ciphertext_valid'] and item['original_valid'] for item in objects) and all(item['chain']['valid'] and item['peer_matches'] for item in proofs)
  print(json.dumps({'passed':passed,'tables':tables,'objects':objects,'proofs':proofs,'counts':counts,'settings':{'storage_provider':settings.storage_provider,'blockchain_provider':settings.blockchain_provider,'encryption_key_sha256':hashlib.sha256(base64.b64decode(settings.evidence_master_key)).hexdigest()},'excluded_user_fields':['token_version']}))
 '''
 
@@ -170,7 +173,7 @@ def main() -> int:
         report["counts"] = inventory["counts"]
         if baseline is None:
             report["_private_inventory"] = inventory
-        check("Evidence inventory is nonempty", bool(inventory["tables"]["evidence"]))
+        check("Evidence inventory is valid, including an empty installation", inventory["passed"])
         check("Every encrypted original authenticates and matches its trusted SHA-256", all(item["ciphertext_valid"] and item["original_valid"] for item in inventory["objects"]))
         check("Every application custody chain is valid", all(item["chain"]["valid"] for item in inventory["proofs"]))
         check("Every custody event and committed transaction ID matches real Fabric history", inventory["settings"]["blockchain_provider"] == "fabric" and all(item["peer_matches"] for item in inventory["proofs"]))

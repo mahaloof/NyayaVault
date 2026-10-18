@@ -61,6 +61,11 @@ def portable_env(source):
             key,value=line.split('=',1); values[key.strip()]=value.strip().strip('"').strip("'")
     if any(not values.get(k) for k in SECRETS): raise RuntimeError('Source configuration is missing a required key; no new key will be generated.')
     selected={k:values[k] for k in SECRETS}
+    # Keep the assistant configuration on both export and restore without
+    # copying source-machine paths into the portable deployment.
+    for key in ('AI_PROVIDER', 'GEMINI_API_KEY', 'AI_MODEL'):
+        if key in values:
+            selected[key] = values[key]
     selected.update(FRONTEND_PORT=values.get('FRONTEND_PORT','3001'),BACKEND_PORT=values.get('BACKEND_PORT','8001'),MINIO_CONSOLE_PORT=values.get('MINIO_CONSOLE_PORT','9001'))
     return selected
 

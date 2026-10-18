@@ -1,5 +1,7 @@
 # Run NyayaVault on Windows
 
+> **Backup status — 17 October 2026:** The old `NyayaVault-Windows-Exact.zip` and pre-reset recovery folder have been deleted at the user’s request. References below to that package and its record counts are historical. For a fresh installation, follow [RUN_PROJECT.md](RUN_PROJECT.md). To move current data, export a new private snapshot first.
+
 **Start here for a new GitHub download:** [RUN_PROJECT.md](RUN_PROJECT.md) has the empty-workspace startup command, login accounts and AI/OCR setup. The snapshot counts below describe the historical October 8 transfer package, not the current running database. Private ZIPs and transfer snapshots are not included in GitHub.
 
 Use Docker Desktop with **Linux containers**. This project keeps the same Next.js application, FastAPI backend, PostgreSQL database, encrypted MinIO storage and two-organization Hyperledger Fabric blockchain. No Python, Node.js, Git or Fabric binaries need to be installed on Windows.

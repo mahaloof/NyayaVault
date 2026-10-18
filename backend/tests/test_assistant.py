@@ -50,7 +50,7 @@ def test_cited_answer_preserves_original_and_ledger(client,login,configured,monk
     with SessionLocal() as db:
         row=db.get(Evidence,e['id']);cipher=storage().get(row.stored_filename);head=row.ledger_head
     def fake(question,sources):
-        assert len(sources)==1 and '45000' in sources[0]['excerpt']
+        assert len(sources)>1 and '45000' in sources[0]['excerpt']
         return assistant.Answer(claims=[assistant.Claim(text='The record states INR 45000.',citations=[assistant.Citation(source_id='S1',quote=sources[0]['excerpt'])])])
     monkeypatch.setattr(assistant,'generate',fake)
     result=client.post('/api/assistant/ask',headers=h,json=p)
@@ -218,3 +218,55 @@ def test_quotation_is_inserted_by_backend(configured, monkeypatch):
     monkeypatch.setattr(assistant.httpx, "Client", lambda **kw:real_client(transport=assistant.httpx.MockTransport(handler), **kw))
     citation = assistant.generate("Summarize", [source]).claims[0].citations[0]
     assert citation.source_id == "S2" and citation.quote == source["excerpt"]
+
+
+def test_case_only_context_and_permissions(client,login,configured,monkeypatch):
+    h=login('admin')
+    case=client.post('/api/cases',headers=h,json={'case_number':'CTX-'+uuid.uuid4().hex[:10],'title':'Public case study','description':'The case description records a court conviction; this is a source narrative.'}).json()
+    captured=[]
+    def fake(question,sources):
+        captured.extend(sources)
+        source=next(s for s in sources if s['label']=='Recorded evidence and custody coverage')
+        return assistant.Answer(claims=[assistant.Claim(text='No evidence custody or transfers are recorded.',citations=[assistant.Citation(source_id=source['source_id'],quote=source['excerpt'])])])
+    monkeypatch.setattr(assistant,'generate',fake)
+    p={'case_id':case['id'],'question':'Who has custody?','confirm_external_processing':True}
+    assert client.post('/api/assistant/ask',headers=login('investigatorB'),json=p).status_code==404
+    assert client.post('/api/assistant/ask',headers=h,json={**p,'confirm_external_processing':False}).status_code==422
+    r=client.post('/api/assistant/ask',headers=h,json=p)
+    assert r.status_code==200,r.text
+    text=' '.join(s['excerpt'] for s in captured)
+    assert case['created_at'] in text and 'court conviction' in text
+    assert 'No evidence custodian or evidence transfers' in text
+    assert all(s['case_id']==case['id'] and s['kind']=='case_record' for s in captured)
+
+
+def test_case_context_custodian_events_and_scope(client,login):
+    from app.case_context import sources_for_case
+    from app.models import Case
+    h,e,p=prepare(client,login)
+    with SessionLocal() as db:
+        sources,warnings=sources_for_case(db,db.get(Case,e['case_id']),'custody',False)
+    text=' '.join(s['excerpt'] for s in sources)
+    assert e['evidence_id'] in text and 'Investigator A' in text
+    assert 'Current recorded custodian' in text and 'Sequence: 1' in text
+    assert all(s['case_id']==e['case_id'] for s in sources)
+    assert 'Public case study' not in text
+
+
+def test_transfers_report_sender_recipient_and_reason(client,login):
+    from app.case_context import sources_for_case
+    from app.models import Case, CaseMember, User
+    h,e,p=prepare(client,login)
+    with SessionLocal() as db:
+        recipient=db.scalar(select(User).where(User.email=='forensic@nyayavault.local'))
+        recipient_id=recipient.id
+        db.add(CaseMember(case_id=e['case_id'],user_id=recipient_id));db.commit()
+    r=client.post('/api/evidence/'+e['id']+'/transfer',headers=h,json={'to_custodian_id':recipient_id,'reason':'Laboratory examination requested'})
+    assert r.status_code==200,r.text
+    with SessionLocal() as db:
+        sources,_=sources_for_case(db,db.get(Case,e['case_id']),'What transfers occurred?',False)
+    transfer=next(s for s in sources if 'Event: CUSTODY_TRANSFERRED' in s['excerpt'])
+    assert 'From custodian: Investigator A' in transfer['excerpt']
+    assert 'Laboratory examination requested' in transfer['excerpt']
+    assert 'To custodian: None recorded' not in transfer['excerpt']
+    assert 'Recorded blockchain status:' in transfer['excerpt']

@@ -51,7 +51,7 @@ Use a model available to your Google project; quotas and billing are controlled 
 
 The assistant supports TXT, selectable or scanned PDFs, and PNG/JPEG document photos. OCR runs locally and reads printed English; handwriting and other languages are unreliable. Limits: four files, 10 MiB per file, first 20 PDF pages and bounded text excerpts. Answers include source quotations and page numbers. For mixed text/image PDF pages, select **Scan every PDF page**.
 
-This integration requires fictional demo records and explicit consent before sending selected text to Google. A real public-source case study is not fictional. See [AI setup and limitations](docs/AI_ASSISTANT.md).
+The assistant also reads case details and recorded custody history without uploaded files. Explicit authorization and consent are required before sending case information and selected text to Google. See [AI setup and limitations](docs/AI_ASSISTANT.md).
 
 ## 4. Stop, restart and check status
 

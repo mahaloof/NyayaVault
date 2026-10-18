@@ -6,7 +6,7 @@ from sqlalchemy import select, func
 from sqlalchemy.orm import Session
 from datetime import datetime, timezone, timedelta
 from cryptography.exceptions import InvalidTag
-from app import assistant, document_text
+from app import assistant, document_text, case_context
 from app.config import settings
 from app.database import get_db
 from app.models import Evidence, AuditLog
@@ -18,10 +18,11 @@ router = APIRouter(prefix="/api/assistant", tags=["Case assistant"])
 
 class Ask(BaseModel):
     case_id: str = Field(min_length=1, max_length=36)
-    evidence_ids: list[str] = Field(min_length=1, max_length=4)
+    evidence_ids: list[str] = Field(default_factory=list, max_length=4)
     question: str = Field(default="", max_length=2000)
     mode: Literal["question", "summary"] = "question"
     confirm_demo_external_processing: bool = False
+    confirm_external_processing: bool = False
     force_ocr: bool = False
 
 @router.get("/status")
@@ -29,23 +30,23 @@ def status(user=Depends(current_user)):
     roles(user, "ADMIN", "INVESTIGATOR", "FORENSIC_OFFICER")
     enabled = settings.ai_provider == "gemini" and bool(settings.gemini_api_key.get_secret_value())
     return {"enabled": enabled, "provider": "Google Gemini", "model": settings.ai_model,
-            "message": "Ready for fictional demo evidence" if enabled else "Configure AI_PROVIDER=gemini and GEMINI_API_KEY on the backend",
+            "message": "Ready for authorized case records and selected evidence" if enabled else "Configure AI_PROVIDER=gemini and GEMINI_API_KEY on the backend",
             "formats": list(document_text.FORMATS), "max_files": 4,
             "max_file_bytes": assistant.MAX_BYTES, "max_excerpt_characters": assistant.MAX_CHARS}
 
 @router.post("/ask")
 def ask(data: Ask, user=Depends(current_user), db: Session=Depends(get_db)):
     roles(user, "ADMIN", "INVESTIGATOR", "FORENSIC_OFFICER")
-    authorized_case(db, user, data.case_id)
+    case = authorized_case(db, user, data.case_id)
     ids = list(dict.fromkeys(data.evidence_ids))
     evidence = list(db.scalars(select(Evidence).where(Evidence.id.in_(ids), Evidence.case_id == data.case_id).order_by(Evidence.evidence_id)))
     if len(evidence) != len(ids):
         raise HTTPException(404, "Selected evidence not found in this authorized case")
-    if not data.confirm_demo_external_processing:
-        raise HTTPException(422, "Confirm that selected evidence is fictional demo data and may be sent to Google")
+    if not (data.confirm_external_processing or data.confirm_demo_external_processing):
+        raise HTTPException(422, "Confirm that you are authorized to send case details, custody records and selected evidence text to Google")
     if not status(user)["enabled"]:
         raise HTTPException(503, "Gemini is not configured; core evidence features remain available")
-    question = "Summarize the supplied evidence excerpts and distinguish allegations from facts." if data.mode == "summary" else data.question.strip()
+    question = "Summarize the supplied evidence excerpts and case records, including app registration and custody; distinguish recorded allegations from facts." if data.mode == "summary" else data.question.strip()
     if not question:
         raise HTTPException(422, "Enter a question")
     if not assistant.slots.acquire(blocking=False):
@@ -57,7 +58,7 @@ def ask(data: Ask, user=Depends(current_user), db: Session=Depends(get_db)):
             raise HTTPException(429, "Limit of five assistant requests per minute reached")
         request_log = AuditLog(actor_user_id=user.id, action="AI_REQUESTED", case_id=data.case_id,
             metadata_json={"actor_role": user.role, "provider": "gemini", "model": settings.ai_model,
-                           "evidence_ids": ids, "mode": data.mode, "result": "PREPARING", "demo_consent": True})
+                           "evidence_ids": ids, "mode": data.mode, "result": "PREPARING", "external_processing_consent": True})
         db.add(request_log); db.commit()
         try:
             sources = []
@@ -92,6 +93,9 @@ def ask(data: Ask, user=Depends(current_user), db: Session=Depends(get_db)):
                         "label": e.evidence_id, "filename": e.original_filename, "sha256": e.sha256_hash,
                         "excerpt": selected, "limited": limited, "page": page['page'],
                         "method": page['method'], "uncertain": page['uncertain']})
+            records, record_warnings = case_context.sources_for_case(db, case, question, data.mode == "summary", start=len(sources)+1)
+            sources.extend(records)
+            warnings.extend(record_warnings)
             # Commit disclosure audit before the external request; errors cannot erase it.
             db.add(AuditLog(actor_user_id=user.id, action="AI_DISCLOSURE", case_id=data.case_id,
                 metadata_json={**request_log.metadata_json, "result": "SENDING", "request_id": request_log.id,
@@ -104,7 +108,7 @@ def ask(data: Ask, user=Depends(current_user), db: Session=Depends(get_db)):
             db.commit()
             return {"claims": [c.model_dump() for c in answer.claims], "sources": sources,
                 "model": settings.ai_model, "answered": bool(answer.claims), "warnings": warnings,
-                "notice": "AI-derived assistance, not evidence or a legal finding. Quotes are checked against extracted text (OCR can contain errors); human review is still required. Only selected excerpts were analyzed. PDFs are limited to the first 20 pages."}
+                "notice": "AI-derived assistance, not evidence or a legal finding. Quotes are checked against extracted text (OCR can contain errors); human review is still required. Case records and selected evidence excerpts were analyzed. Case descriptions are entered narratives, not independently verified findings. Custody and transaction statuses are database records, not a fresh blockchain verification. PDFs are limited to the first 20 pages."}
         except HTTPException as exc:
             db.add(AuditLog(actor_user_id=user.id, action="AI_FAILED", case_id=data.case_id,
                 metadata_json={"actor_role": user.role, "request_id": request_log.id, "result": "FAILED", "error_status": exc.status_code}))

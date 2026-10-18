@@ -1,5 +1,7 @@
 # Current NyayaVault project
 
+> **Backup status — 17 October 2026:** The old `NyayaVault-Windows-Exact.zip` and pre-reset recovery folder have been deleted at the user’s request. References below to that package and its record counts are historical. For a fresh installation, follow [RUN_PROJECT.md](../RUN_PROJECT.md). To move current data, export a new private snapshot first.
+
 Open **http://127.0.0.1:3001**. There is one running NyayaVault deployment, with two Fabric organizations sharing the same blockchain.
 
 From the `nyayavault` folder, resume it after starting Docker Desktop:

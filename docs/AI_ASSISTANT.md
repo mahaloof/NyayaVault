@@ -1,16 +1,22 @@
 # Gemini case assistant
 
-The assistant answers questions and summarizes explicitly selected fictional evidence, with exact source quotations and links back to the evidence record. It is an optional assistance layer. It does not determine guilt, authenticate allegations, modify evidence, or generate blockchain transactions.
+The assistant answers questions and summarizes authorized case records and optional selected evidence, with exact source quotations and links back to the evidence record. It is an optional assistance layer. It does not determine guilt, authenticate allegations, modify evidence, or generate blockchain transactions.
 
 ## Encryption and processing
 
-1. An authenticated administrator, investigator or forensic officer selects an authorized case and up to four evidence files. Viewer accounts cannot use the assistant because they cannot download original content.
+1. An authenticated administrator, investigator or forensic officer selects an authorized case and optionally up to four evidence files. Viewer accounts cannot use the assistant because they cannot download original content.
 2. The backend checks case membership and every evidence-to-case association before reading storage.
 3. It decrypts selected originals, checks AES-GCM authentication and compares SHA-256 with the immutable registered fingerprint. Any failure blocks the request.
 4. Text extraction happens locally. No persistent plaintext files, searchable plaintext index or answer history are saved. PDF input uses process pipes. OCR page images use a private temporary directory in Docker’s `/dev/shm` shared memory, cleaned on success or failure; no disk-backed fallback is permitted. Process memory and OS swap are outside this application's secure-erasure guarantees.
-5. Only the question and bounded excerpts with temporary source IDs are sent over HTTPS to Google's Gemini API. Encryption keys, credentials, original files, database records and custody history are not sent.
+5. The question, case registration details, case description, current evidence custodians, recorded custody events and optional file excerpts are sent over HTTPS to Google's Gemini API after explicit consent. Encryption keys, credentials and original files are not sent. Records are scoped to the authorized case; no evidence selection is required.
 6. The backend divides excerpts into exact passages of at most 800 characters. Gemini selects request-local passage IDs from a constrained schema; the backend rejects unknown IDs and inserts the original passage text as each quotation. Source IDs and verbatim quotes are then validated before an answer is accepted. A valid quote does not prove the model's interpretation is correct: reviewers must check every claim.
 7. The append-only audit records request, attempted disclosure, completion/failure, selected evidence IDs and original hashes, without questions, excerpts or answers. These are application audit entries, not Fabric proof events.
+
+## Case records
+
+Case descriptions are user-entered narratives, not independently verified findings. Answers attribute recorded verdicts to the description rather than declaring guilt. App registration timestamps are distinct from incident dates. Custody refers to evidence items, not the case creator or a suspect. With no evidence, the assistant reports no recorded evidence custody or transfers.
+
+Context includes up to 100 evidence metadata records and the 200 most recent custody events, plus up to 6,000 description characters. Truncation is explicitly reported. Recorded transaction statuses are not a fresh Fabric verification. Record citations link to the case or evidence; their hashes describe the supplied record excerpt, not an evidence file.
 
 ## Supported evidence and limits
 
@@ -24,7 +30,7 @@ The assistant answers questions and summarizes explicitly selected fictional evi
 
 ## Google API privacy and cost
 
-Use only fictional training records with this demo integration. Each request requires confirmation that the selected records are fictional and may be sent to Google. This is an attestation, not automated detection of sensitive data.
+Each request requires confirmation that the user is authorized to disclose the case information and selected evidence text to Google. Public-source case studies can be used without calling them fictional. This is user attestation, not automatic sensitivity screening. Avoid sending confidential investigation information without appropriate authorization.
 
 Google's unpaid-service terms permit use of submitted content and responses for product improvement. Paid services have different data-use terms, but should still be assessed before any real evidence is processed. Free quotas, model availability and pricing depend on the Google project and can change. An API key does not guarantee free use; check the project's billing and quota settings.
 
@@ -104,7 +110,7 @@ The rebuilt running backend passed two further warehouse summary API requests (s
 1. Upload a PDF, PNG or JPEG through the usual Evidence vault workflow and assign it to the correct case.
 2. Open Case assistant and select that case and the document. Choose a summary or ask a question.
 3. For a PDF page containing both selectable text and photographed notes, enable **Scan every PDF page**. Otherwise pages with usable text use direct extraction, and scanned pages use OCR automatically.
-4. Confirm external processing only for fictional demonstration records. OCR runs locally; Gemini receives selected extracted text, not the document image.
+4. Confirm external processing only when authorized to share the case information. OCR runs locally; Gemini receives case records and selected extracted text, not the document image.
 5. Review the page number and quotation beneath each answer. Expand the supplied excerpts to inspect the extracted text. Follow the evidence link to access the original document under the existing permissions.
 
 OCR quotations reproduce the extracted text, which may differ from the original image. Uncertain pages are flagged; blank/unreadable pages and page-count limits are disclosed. This release does not provide reliable handwriting recognition or non-English OCR. It does not store a persistent OCR index or modify original evidence, encryption keys, or ledger entries. Temporary shared-memory images are removed when extraction returns or raises an error; abrupt process termination and OS swap remain outside secure-erasure guarantees.

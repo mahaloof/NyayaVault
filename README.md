@@ -1,5 +1,7 @@
 # NyayaVault
 
+> **Backup status — 17 October 2026:** The old `NyayaVault-Windows-Exact.zip` and pre-reset recovery folder have been deleted at the user’s request. References below to that package and its record counts are historical. For a fresh installation, follow [RUN_PROJECT.md](RUN_PROJECT.md). To move current data, export a new private snapshot first.
+
 **How to run:** [RUN_PROJECT.md](RUN_PROJECT.md) — Windows Docker setup, empty startup, login accounts and optional AI/OCR.
 
 **Current local data (17 October 2026):** reset to zero cases, evidence and evidence transactions at the user’s request. Existing accounts and AI/OCR are retained. See [fresh-start details](docs/FRESH_START.md).
